@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+ol,
+ul {
+  list-style: none;
+}
+input,
+button,
+textarea {
+  outline: 0;
+  border-radius: 0;
+  border: 0;
+  color: #777;
+  font-family: "Nanum Myeongjo", serif;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 14px;
+}
+textarea {
+  resize: none;
+}
+
+img {
+  display: block;
+}
+em {
+  font-style: normal;
+}
+b {
+  font-weight: normal;
+}
+/* setting reset Layout Style */
+.center {
+  width: 100%;
+  margin: auto;
+  max-width: 1440px;
+  height: auto;
+}
+
+.wrap {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+body {
+  font-size: 14px;
+  font-family: "Nanum Myeongjo", serif;
+  font-family: "Noto Sans KR", sans-serif;
+}

@@ -1,0 +1,30 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  border-bottom: 1px solid #efefef;
+  .logo {
+    // width: 40%;
+    a {
+      display: block;
+      text-align: center;
+      padding: 20px;
+    }
+  }
+  nav {
+    // width: 40%;
+    ul {
+      display: flex;
+      justify-content: space-between;
+
+      li {
+        // width: 33.33%;
+        a {
+          display: block;
+          text-align: center;
+          padding: 20px;
+        }
+      }
+    }
+  }
+}
