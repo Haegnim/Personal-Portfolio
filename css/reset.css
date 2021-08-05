@@ -11,6 +11,12 @@ ol,
 ul {
   list-style: none;
 }
+
+@font-face {
+  font-family: "Neutral Face";
+  src: url("/MY-P/font/NeutralFace.otf") format("opentype");
+}
+
 input,
 button,
 textarea {
@@ -18,8 +24,10 @@ textarea {
   border-radius: 0;
   border: 0;
   color: #777;
-  font-family: "Nanum Myeongjo", serif;
-  font-family: "Noto Sans KR", sans-serif;
+  /* font-family: "Nanum Myeongjo", serif;
+  font-family: "Noto Sans KR", sans-serif; */
+  font-family: "Cormorant Garamond", serif;
+
   font-size: 14px;
 }
 textarea {
@@ -51,6 +59,10 @@ b {
 
 body {
   font-size: 14px;
+  /* font-family: "Cormorant Garamond", serif; */
+  font-family: Neutral Face;
+
+  /* 
   font-family: "Nanum Myeongjo", serif;
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: "Noto Sans KR", sans-serif; */
 }
