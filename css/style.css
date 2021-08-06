@@ -1,6 +1,7 @@
 .wrap {
   display: flex;
   overflow: hidden;
+  height: 100vh;
 }
 
 .blind {
@@ -22,7 +23,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
-  box-shadow: 3px 0px 6px #eee;
+  box-shadow: 3px 0px 6px rgba(0, 0, 0, 0.1);
   z-index: 999;
   background: #fff;
 }
@@ -30,11 +31,18 @@
   width: 30px;
   height: 30px;
 }
+.header .hamberger.on span:nth-child(1) {
+  transform: rotate(45deg) translate(2px, 5px);
+}
+.header .hamberger.on span:nth-child(2) {
+  transform: rotate(-45deg) translateY(-4px);
+}
 .header .hamberger span {
   display: block;
   width: 100%;
   height: 2px;
   background: #000;
+  transition: all 0.4s;
 }
 .header .hamberger span:nth-child(1) {
   margin-bottom: 5px;
@@ -52,10 +60,37 @@
   bottom: 60px;
 }
 
+aside {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 99;
+  display: none;
+  background: rgba(255, 255, 255, 0.8);
+}
+aside.on {
+  display: block;
+}
+aside ul {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0 100px;
+}
+aside ul li {
+  font-size: 60px;
+  line-height: 1.8;
+}
+
 .home {
   width: 100%;
   display: flex;
   transition: all 1s;
+  overflow: hidden;
+  scroll-behavior: smooth;
 }
 
 .info {
@@ -64,10 +99,14 @@
   padding: 60px 60px;
   position: relative;
   transition: all 0.4s;
+  box-shadow: 3px 0px 6px #eee;
+}
+.info div {
+  margin-bottom: 30px;
 }
 .info .introduction {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
 }
 .info .introduction .face {
   width: 40%;
@@ -80,35 +119,92 @@
      object-fit: cover;
   border-radius: 50%;
 }
-.info .introduction .self-intro {
-  padding: 0 20px;
+.info .introduction .hello {
+  padding: 30px 20px;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.info .introduction .self-intro h4 {
-  font-size: 25px;
+.info .introduction .hello .aboutme .about-tit {
+  display: flex;
+  justify-content: space-between;
+}
+.info .introduction .hello .aboutme .about-tit i {
+  font-size: 18px;
+  padding: 0 5px;
+}
+.info .introduction .hello .aboutme h4 {
+  font-size: 14px;
+}
+.info .introduction .hello .hello-txt {
+  font-size: 19px;
+  line-height: 1.8;
+}
+.info .imymemine {
+  font-size: 19px;
+  padding-bottom: 60px;
+}
+.info .imymemine li {
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0 5px;
+}
+.info .skill {
+  font-size: 19px;
+}
+.info .skill ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  padding: 30px 0;
+}
+.info .skill ul li {
+  width: calc(20% - 20px);
+  height: 100px;
+  border: 1px solid #fff;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  transition: all 0.4s;
+  background: #efefef;
+}
+.info .skill ul li:hover {
+  border: 1px solid blue;
 }
 
 .work-veiw {
   width: 65%;
   height: auto;
-  background: #efefef;
   overflow: visible;
   transition: all 0.4s;
   position: relative;
+  background: #efefef;
 }
 .work-veiw .work-list {
   position: absolute;
   display: flex;
   height: 100%;
-  width: 200%;
   transition: all 0.4s;
 }
 .work-veiw .work-list li {
   margin: 0 70px;
-  width: 600px;
-  box-shadow: 0px 20px 20px #ccc;
+  width: 550px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
   transition: all 0.4s;
+}
+.work-veiw .work-list li span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 110%;
+  height: 110%;
+  background: linear-gradient(144deg, #00b0f6 0%, rgba(255, 249, 53, 0) 48%, rgba(255, 255, 255, 0) 100%);
+  opacity: 1;
+  transition: all 0.4s;
+  background-blend-mode: multiply;
 }
 .work-veiw .work-list li .work-subject {
   position: absolute;
@@ -119,7 +215,8 @@
   font-size: 20px;
   display: flex;
   flex-direction: column;
-  text-shadow: 0px 5px 10px #ddd;
+  text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s;
 }
 .work-veiw .work-list li .work-subject em {
   font-size: 50px;
@@ -128,21 +225,35 @@
   margin-bottom: 20px;
 }
 .work-veiw .work-list li .work-subject h4 {
-  margin-top: 10px;
+  margin: 10px 0;
   font-size: 65px;
+}
+.work-veiw .work-list li .work-subject p {
+  font-size: 14px;
+  line-height: 1.7;
+}
+.work-veiw .work-list li a {
+  position: absolute;
+  bottom: 100px;
+  right: 30px;
 }
 .work-veiw .work-list li img {
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 0.4s;
 }
 .work-veiw .work-list li:hover {
   transform: scale(105%);
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1);
+}
+.work-veiw .work-list li:hover span {
+  opacity: 0;
 }
 .work-veiw .work-list .work-up {
   height: 80%;
-  background: #f2f2f2;
+  background: #fff;
   border-radius: 0 0 20px 20px;
 }
 .work-veiw .work-list .work-up img {
@@ -150,7 +261,7 @@
 }
 .work-veiw .work-list .work-down {
   height: 80%;
-  background: #f2f2f2;
+  background: #fff;
   margin: auto 0 0 0;
   border-radius: 20px 20px 0 0;
 }
