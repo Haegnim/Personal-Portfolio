@@ -57,7 +57,7 @@
 .header .email {
   position: relative;
   transform: rotate(-90deg);
-  bottom: 60px;
+  bottom: 80px;
 }
 
 aside {
@@ -91,11 +91,13 @@ aside ul li {
   transition: all 1s;
   overflow: hidden;
   scroll-behavior: smooth;
+  background: #efefef;
 }
 
 .info {
-  width: 35%;
+  width: 650px;
   height: auto;
+  background: #fff;
   padding: 60px 60px;
   position: relative;
   transition: all 0.4s;
@@ -109,8 +111,11 @@ aside ul li {
   justify-content: space-between;
 }
 .info .introduction .face {
-  width: 40%;
+  width: 200px;
+  height: 200px;
   padding: 0 10px;
+  border-radius: 50%;
+  border: 1px solid #555;
 }
 .info .introduction .face img {
   width: 100%;
@@ -157,13 +162,12 @@ aside ul li {
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: space-between;
-  padding: 30px 0;
+  padding: 5px 0;
 }
 .info .skill ul li {
-  width: calc(20% - 20px);
+  width: calc(20% - 10px);
   height: 100px;
   border: 1px solid #fff;
-  margin-bottom: 20px;
   border-radius: 20px;
   transition: all 0.4s;
   background: #efefef;
@@ -178,7 +182,6 @@ aside ul li {
   overflow: visible;
   transition: all 0.4s;
   position: relative;
-  background: #efefef;
 }
 .work-veiw .work-list {
   position: absolute;
@@ -219,7 +222,7 @@ aside ul li {
   transition: all 0.4s;
 }
 .work-veiw .work-list li .work-subject em {
-  font-size: 50px;
+  font-size: 60px;
   font-weight: thin;
   font-family: "Poiret One", cursive;
   margin-bottom: 20px;
@@ -236,6 +239,8 @@ aside ul li {
   position: absolute;
   bottom: 100px;
   right: 30px;
+  background: #fff;
+  padding: 20px;
 }
 .work-veiw .work-list li img {
   width: 100%;

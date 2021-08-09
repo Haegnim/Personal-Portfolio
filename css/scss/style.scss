@@ -60,7 +60,7 @@
   .email {
     position: relative;
     transform: rotate(-90deg);
-    bottom: 60px;
+    bottom: 80px;
   }
 }
 aside {
@@ -94,11 +94,12 @@ aside {
   transition: all 1s;
   overflow: hidden;
   scroll-behavior: smooth;
+  background: #efefef;
 }
 .info {
-  width: 35%;
+  width: 650px;
   height: auto;
-  // background: #fff;
+  background: #fff;
   // border-right: 1px solid #ddd;
   padding: 60px 60px;
   position: relative;
@@ -113,8 +114,11 @@ aside {
 
     // align-items: center;
     .face {
-      width: 40%;
+      width: 200px;
+      height: 200px;
       padding: 0 10px;
+      border-radius: 50%;
+      border: 1px solid #555;
       img {
         width: 100%;
         height: 100%;
@@ -164,12 +168,11 @@ aside {
       flex-wrap: wrap;
       justify-content: space-between;
       align-content: space-between;
-      padding: 30px 0;
+      padding: 5px 0;
       li {
-        width: calc(20% - 20px);
+        width: calc(20% - 10px);
         height: 100px;
         border: 1px solid #fff;
-        margin-bottom: 20px;
         border-radius: 20px;
         transition: all 0.4s;
         background: #efefef;
@@ -187,7 +190,7 @@ aside {
   overflow: visible;
   transition: all 0.4s;
   position: relative;
-  background: #efefef;
+  // background: #efefef;
 
   .work-list {
     position: absolute;
@@ -234,7 +237,7 @@ aside {
         text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
         transition: all 0.4s;
         em {
-          font-size: 50px;
+          font-size: 60px;
           font-weight: thin;
           font-family: "Poiret One", cursive;
           margin-bottom: 20px;
@@ -252,6 +255,8 @@ aside {
         position: absolute;
         bottom: 100px;
         right: 30px;
+        background: #fff;
+        padding: 20px;
       }
       img {
         width: 100%;

@@ -20,7 +20,7 @@ function horawheel() {
       tranX += 150;
     } else {
       Info.style.opacity = 0;
-      workVeiw.style.background = "#fff";
+      Home.style.background = "#fff";
       console.log("wheel down");
       tranX -= 150;
     }
@@ -28,7 +28,7 @@ function horawheel() {
     if (tranX > 0) {
       tranX = 0;
       Info.style.opacity = 1;
-      workVeiw.style.background = "#efefef";
+      Home.style.background = "#efefef";
     } else if (workListX < Math.abs(tranX)) {
       tranX = -1 * workListX;
     }
