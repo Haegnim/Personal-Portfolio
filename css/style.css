@@ -78,8 +78,6 @@
           animation: right 1 2s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  -webkit-animation-delay: 3.4s;
-          animation-delay: 3.4s;
 }
 .header.start {
   -webkit-animation-timing-function: ease-in;
@@ -178,8 +176,6 @@ aside ul li:hover {
           animation: right 1 2s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  -webkit-animation-delay: 0.1s;
-          animation-delay: 0.1s;
 }
 .info.start {
   -webkit-animation-timing-function: ease-in;
@@ -196,8 +192,8 @@ aside ul li:hover {
   align-items: center;
 }
 .info .introduction .face {
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
   padding: 0 10px;
   border-radius: 50%;
   border: 1px solid #555;
@@ -230,10 +226,10 @@ aside ul li:hover {
   border-bottom: 1px solid #ddd;
 }
 .info .introduction .hello .aboutme .about-tit h4 {
-  font-size: 18px;
+  font-size: 14px;
 }
 .info .introduction .hello .aboutme .about-tit i {
-  font-size: 24px;
+  font-size: 20px;
   padding: 0 2px;
 }
 .info .introduction .hello .aboutme .contack {
@@ -242,7 +238,7 @@ aside ul li:hover {
   border-bottom: 1px solid #ddd;
 }
 .info .introduction .hello .aboutme .contack p {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.5;
   padding: 3px 0;
   color: #777;
@@ -259,7 +255,7 @@ aside ul li:hover {
   padding: 3px 0;
 }
 .info .introduction .hello .aboutme .golink .aboutlink strong {
-  font-size: 14px;
+  font-size: 12px;
 }
 .info .introduction .hello .aboutme .golink .aboutlink i {
   color: #777;
@@ -274,7 +270,7 @@ aside ul li:hover {
   padding: 15px 0 5px;
 }
 .info .skill {
-  font-size: 19px;
+  font-size: 14px;
 }
 .info .skill b {
   border-bottom: 1px solid #333;
@@ -289,7 +285,7 @@ aside ul li:hover {
   padding: 20px 0 15px;
 }
 .info .skill em {
-  font-size: 14px;
+  font-size: 12px;
   color: #777;
   margin-left: 8px;
 }
@@ -300,12 +296,12 @@ aside ul li:hover {
   padding: 5px 0;
 }
 .info .skill ul li {
-  width: 70px;
+  width: 60px;
   border: 1px solid #fff;
   border-radius: 20px;
   transition: all 0.4s;
   background: #efefef;
-  margin: 8px;
+  margin: 5px;
   padding: 10px;
 }
 .info .skill ul li:hover {
@@ -334,8 +330,6 @@ aside ul li:hover {
           animation: right 1 2s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  -webkit-animation-delay: 3.6s;
-          animation-delay: 3.6s;
 }
 .work-veiw.start {
   -webkit-animation-timing-function: ease-in;
@@ -351,7 +345,7 @@ aside ul li:hover {
 }
 .work-veiw .work-list .work {
   margin: 0 70px;
-  width: 650px;
+  width: 600px;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
@@ -385,12 +379,13 @@ aside ul li:hover {
   padding: 8px 3px 5px;
   background: #fff;
   color: #000;
-  font-size: 12px;
+  font-size: 10px;
   width: 90px;
   text-align: center;
   border-radius: 3px;
   position: absolute;
   right: 60px;
+  text-shadow: none;
 }
 .work-veiw .work-list .work .work-subject .skilltoll {
   display: flex;
@@ -435,6 +430,8 @@ aside ul li:hover {
   flex-direction: column;
 }
 .work-veiw .work-list .work .work-link a {
+  font-size: 14px;
+  text-shadow: none;
   display: block;
   background: rgba(0, 0, 0, 0.2);
   padding: 20px;

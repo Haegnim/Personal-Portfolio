@@ -68,7 +68,7 @@ $animation: ease-in;
   transform: translateX(5000px);
   animation: right 1 2s;
   animation-fill-mode: forwards;
-  animation-delay: 3.4s;
+  // animation-delay: 3.4s;
   &.start {
     animation-timing-function: $animation;
     animation-delay: 3.4s;
@@ -167,7 +167,7 @@ aside {
   transform: translateX(1000%);
   animation: right 1 2s;
   animation-fill-mode: forwards;
-  animation-delay: 0.1s;
+  // animation-delay: 3.5s;
   &.start {
     animation-timing-function: $animation;
     animation-delay: 3.5s;
@@ -181,8 +181,8 @@ aside {
     justify-content: space-between;
     align-items: center;
     .face {
-      width: 200px;
-      height: 200px;
+      width: 180px;
+      height: 180px;
       padding: 0 10px;
       border-radius: 50%;
       border: 1px solid #555;
@@ -214,11 +214,11 @@ aside {
           border-bottom: 1px solid #ddd;
 
           h4 {
-            font-size: 18px;
+            font-size: 14px;
           }
 
           i {
-            font-size: 24px;
+            font-size: 20px;
             padding: 0 2px;
           }
         }
@@ -226,7 +226,7 @@ aside {
           padding: 10px 3px;
 
           p {
-            font-size: 14px;
+            font-size: 12px;
             line-height: 1.5;
             padding: 3px 0;
             color: #777;
@@ -245,7 +245,7 @@ aside {
             padding: 3px 0;
 
             strong {
-              font-size: 14px;
+              font-size: 12px;
             }
             i {
               color: #777;
@@ -266,7 +266,7 @@ aside {
     }
   }
   .skill {
-    font-size: 19px;
+    font-size: 14px;
     // line-height: 1.8;
     b {
       border-bottom: 1px solid #333;
@@ -281,7 +281,7 @@ aside {
       padding: 20px 0 15px;
     }
     em {
-      font-size: 14px;
+      font-size: 12px;
       color: #777;
       margin-left: 8px;
     }
@@ -293,13 +293,13 @@ aside {
       // align-content: space-between;
       padding: 5px 0;
       li {
-        width: 70px;
+        width: 60px;
         // height: 100px;
         border: 1px solid #fff;
         border-radius: 20px;
         transition: all 0.4s;
         background: #efefef;
-        margin: 8px;
+        margin: 5px;
         padding: 10px;
         &:hover {
           border: 1px solid blue;
@@ -328,7 +328,7 @@ aside {
   transform: translateX(1000%);
   animation: right 1 2s;
   animation-fill-mode: forwards;
-  animation-delay: 3.6s;
+  // animation-delay: 3.6s;
   &.start {
     animation-timing-function: $animation;
 
@@ -345,7 +345,7 @@ aside {
     // transform: translateX(-100px);
     .work {
       margin: 0 70px;
-      width: 650px;
+      width: 600px;
       box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
       position: relative;
       overflow: hidden;
@@ -383,12 +383,13 @@ aside {
           padding: 8px 3px 5px;
           background: #fff;
           color: #000;
-          font-size: 12px;
+          font-size: 10px;
           width: 90px;
           text-align: center;
           border-radius: 3px;
           position: absolute;
           right: 60px;
+          text-shadow: none;
         }
         .skilltoll {
           // width: 70%;
@@ -437,6 +438,8 @@ aside {
         display: flex;
         flex-direction: column;
         a {
+          font-size: 14px;
+          text-shadow: none;
           display: block;
           background: rgba(0, 0, 0, 0.2);
           padding: 20px;

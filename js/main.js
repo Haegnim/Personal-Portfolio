@@ -30,7 +30,7 @@ function horawheel() {
     if (offset >= 120) {
       Info.style.opacity = 0;
       Home.style.background = "#fff";
-      workVeiw.style.background = "#fff";
+      workVeiw.style.background = "none";
       // console.log("wheel down");
     } else {
       Info.style.opacity = 1;
