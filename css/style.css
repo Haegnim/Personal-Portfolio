@@ -2,7 +2,7 @@
   display: flex;
   overflow: hidden;
   height: 100vh;
-  background: #000;
+  background: #efefef;
 }
 
 .blind {
@@ -20,6 +20,8 @@
   position: fixed;
   width: 100%;
   height: 100vh;
+  top: 0;
+  left: 0;
   background: #fff;
   z-index: 9999;
   display: flex;
@@ -74,16 +76,18 @@
   z-index: 999;
   background: #fff;
   transform: translateX(5000px);
-  -webkit-animation: right 1 2s;
-          animation: right 1 2s;
+  -webkit-animation: right 1 3s;
+          animation: right 1 3s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
 }
 .header.start {
   -webkit-animation-timing-function: ease-in;
           animation-timing-function: ease-in;
-  -webkit-animation-delay: 3.4s;
-          animation-delay: 3.4s;
+  -webkit-animation-delay: 2.6s;
+          animation-delay: 2.6s;
 }
 .header .hamberger {
   width: 30px;
@@ -172,16 +176,18 @@ aside ul li:hover {
   transition: all 0.4s;
   box-shadow: 3px 0px 6px #eee;
   transform: translateX(1000%);
-  -webkit-animation: right 1 2s;
-          animation: right 1 2s;
+  -webkit-animation: right 1 3s;
+          animation: right 1 3s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
 }
 .info.start {
   -webkit-animation-timing-function: ease-in;
           animation-timing-function: ease-in;
-  -webkit-animation-delay: 3.5s;
-          animation-delay: 3.5s;
+  -webkit-animation-delay: 2.8s;
+          animation-delay: 2.8s;
 }
 .info > div {
   margin-bottom: 20px;
@@ -326,16 +332,18 @@ aside ul li:hover {
   position: relative;
   background: #efefef;
   transform: translateX(1000%);
-  -webkit-animation: right 1 2s;
-          animation: right 1 2s;
+  -webkit-animation: right 1 3s;
+          animation: right 1 3s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
 }
 .work-veiw.start {
   -webkit-animation-timing-function: ease-in;
           animation-timing-function: ease-in;
-  -webkit-animation-delay: 3.6s;
-          animation-delay: 3.6s;
+  -webkit-animation-delay: 3.1s;
+          animation-delay: 3.1s;
 }
 .work-veiw .work-list {
   position: absolute;
@@ -358,7 +366,6 @@ aside ul li:hover {
   display: block;
   width: 110%;
   height: 110%;
-  background: linear-gradient(144deg, #00b0f6 0%, rgba(255, 249, 53, 0) 48%, rgba(255, 255, 255, 0) 100%);
   opacity: 1;
   transition: all 0.4s;
   background-blend-mode: multiply;

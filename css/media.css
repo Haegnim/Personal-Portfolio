@@ -1,4 +1,7 @@
 @media screen and (max-width: 1800px) {
+  .info {
+    padding: 20px 40px;
+  }
   .info .introduction {
     flex-direction: column;
   }
@@ -6,14 +9,22 @@
     width: 100%;
     padding: 30px 3px;
   }
+  .info .skill ul li {
+    width: 40px;
+    padding: 5px;
+  }
 }
 @media screen and (max-width: 1200px) {
   .wrap {
     display: block;
   }
+  .intro p {
+    font-size: 32px;
+  }
   .home {
     height: 100vh;
   }
+
   .header {
     height: 60px;
     width: 100%;
@@ -66,7 +77,8 @@
     margin: 20px auto auto;
   }
   .info .skill ul li {
-    width: 55px;
+    width: 40px;
+    padding: 5px;
   }
   .work-veiw .work-list .work .work-link {
     position: static;
@@ -86,6 +98,7 @@
   }
   .info {
     width: 100%;
+    /* height: 100vh; */
   }
   .info .introduction {
     flex-direction: row;
@@ -96,6 +109,10 @@
   }
   .info .introduction .hello {
     width: 65%;
+  }
+  .info .skill ul li {
+    width: 30px;
+    padding: 2px;
   }
   .work-veiw {
     width: 100%;
@@ -132,5 +149,43 @@
   }
   .work-veiw .work-list .work .work-link {
     display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  .intro p {
+    font-size: 21px;
+  }
+  .header .email {
+    display: none;
+  }
+  .header .logo {
+    font-size: 14px;
+    transform: translateX(0%);
+  }
+  .info .introduction {
+    flex-direction: column;
+  }
+  .info .introduction .hello {
+    width: 100%;
+    padding: 30px 3px;
+  }
+  .work-veiw .work-list .work .work-subject .cata {
+    width: 60px;
+    padding: 3px 5px;
+    font-size: 7px;
+  }
+  .work-veiw .work-list .work .work-subject {
+    justify-content: center;
+  }
+  .work-veiw .work-list .work .work-subject b {
+    font-size: 12px;
+  }
+  .work-veiw .work-list .work .work-subject h4 {
+    font-size: 32px;
+  }
+  .work-veiw .work-list .work .work-subject .skilltoll li {
+    width: 20px;
+    height: 20px;
+    margin: 0 6px;
   }
 }

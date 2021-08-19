@@ -28,6 +28,8 @@
   0% {
     transform: translateX(5000px);
   }
+  30% {
+  }
   100% {
     transform: translateX(0);
   }

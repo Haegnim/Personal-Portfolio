@@ -1,3 +1,26 @@
+function resize() {
+  console.log("resize");
+  window.addEventListener("resize", function () {
+    if (window.innerWidth > 768) {
+      console.log("!resize");
+      horawheel();
+    } else {
+      const workList = document.querySelector(".work-list");
+      workList.style.width = "100%";
+      workList.style.transform = `0px`;
+      console.log("!resize");
+    }
+  });
+
+  // window.removeEventListener("resize", function () {
+  //   horawheel();
+  //   workList.style.width = "100%";
+  //   workList.style.transform = `0px`;
+  //   console.log("resize");
+  // });
+}
+resize();
+
 function horawheel() {
   const workList = document.querySelector(".work-list");
   const work = document.querySelectorAll(".work-list li");
@@ -15,18 +38,21 @@ function horawheel() {
   workList.style.width = workListX + "px";
 
   let offset = 0;
-
   window.addEventListener("wheel", e => {
     // console.log(e);
-    if (Math.abs(e.deltaY) < 120) {
-      // console.log("delay");
-      e.deltaX = 0;
-      offset += Math.sign(e.deltaY) * 25;
+    if (window.innerWidth > 768) {
+      if (Math.abs(e.deltaY) < 120) {
+        // console.log("delay");
+        e.deltaX = 0;
+        offset += Math.sign(e.deltaY) * 25;
+      } else {
+        offset += Math.sign(e.deltaY) * 150;
+        console.log("delay");
+      }
     } else {
-      offset += Math.sign(e.deltaY) * 150;
-      console.log("delay");
+      offset = 0;
     }
-    console.log(offset);
+    // console.log(offset);
     if (offset >= 120) {
       Info.style.opacity = 0;
       Home.style.background = "#fff";
@@ -46,8 +72,18 @@ function horawheel() {
     workList.style.transform = `translateX(-${offset}px`;
   });
 }
+
 horawheel();
 
+function mobilescroll() {
+  const workList = document.querySelector(".work-list");
+
+  if (window.innerWidth <= 768) {
+    workList.style.width = "100%";
+    workList.style.transform = `0px`;
+  }
+}
+mobilescroll();
 function hambergerClick() {
   const hamberger = document.querySelector(".hamberger");
   const tabnav = document.querySelector("aside");
@@ -59,15 +95,15 @@ function hambergerClick() {
 }
 hambergerClick();
 
-function introOut() {
-  const intro = document.querySelector(".intro");
-  // console.log(intro);
-  // intro.style.display = "none";
-  setTimeout(function () {
-    intro.style.display = "none";
-  }, 4000);
-}
-introOut();
+// function introOut() {
+//   const intro = document.querySelector(".intro");
+//   // console.log(intro);
+//   // intro.style.display = "none";
+//   setTimeout(function () {
+//     intro.style.display = "none";
+//   }, 4000);
+// }
+// introOut();
 
 function setCookie(cname, cvalue, min) {
   const exdate = new Date();
@@ -76,8 +112,6 @@ function setCookie(cname, cvalue, min) {
   const expires = "expires=" + exdate.toUTCString();
   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
-
-// setCookie("open", "started", "exdays");
 
 function getCookie(cname) {
   const name = cname + "=";
