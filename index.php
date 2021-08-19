@@ -63,8 +63,16 @@
       <section class="info">
         <h4 class="blind">자기소개</h4>
         <div class="introduction">
-          <div class="face">
-            <img src="/MY-P/img/mimoji.png" alt="" />
+          <div class="faceani">
+
+            <span class="face-hello"></span>
+            <div class="face">
+
+              <video autoplay loop muted>
+                <source src="/MY-P/img/mimoji.mp4" type="video/mp4">
+              </video>
+              <!-- <img src="/MY-P/img/mimoji.png" alt="" /> -->
+            </div>
           </div>
           <div class="hello">
             <div class="aboutme">
@@ -151,6 +159,12 @@
               <li>
                 <img src="/MY-P/icon/Xd.svg" alt="" />
               </li>
+              <li>
+                <img src="/MY-P/icon/c4d.png" alt="" />
+              </li>
+              <li>
+                <img src="/MY-P/icon/glyphs.png" alt="" />
+              </li>
             </ul>
           </div>
         </div>
@@ -209,7 +223,7 @@
                 <a href="<?=$work_link?>"> link </a>
               </div>
             </div>
-            <img src="<?=$work_img?>" alt="" />
+            <img src="/MY-P/img/popo/<?=$work_img?>" alt="" />
           </li>
 
           <!-- loop end -->

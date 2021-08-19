@@ -233,3 +233,16 @@ function scrolldownani() {
   // });
 }
 scrolldownani();
+
+function anistart() {
+  const Info = document.querySelector(".info");
+  const faceHello = document.querySelector(".face-hello");
+
+  Info.addEventListener("mousemove", function () {
+    faceHello.classList.add("on");
+    setTimeout(function () {
+      faceHello.classList.remove("on");
+    }, 15000);
+  });
+}
+anistart();

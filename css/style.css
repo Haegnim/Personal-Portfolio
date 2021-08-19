@@ -207,12 +207,57 @@
   justify-content: space-between;
   align-items: center;
 }
+.info .introduction .faceani {
+  position: relative;
+}
+.info .introduction .face-hello {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  background: url(/MY-P/img/messeg.svg) no-repeat center center;
+  left: -15px;
+  top: -15px;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.info .introduction .face-hello.on {
+  animation: face-hello 6s 1;
+}
+@keyframes face-hello {
+  0% {
+    transform: rotate(0);
+    opacity: 0;
+  }
+  35% {
+    opacity: 1;
+  }
+  80% {
+    transform: rotate(360deg);
+  }
+  85% {
+    transform: rotate(365deg);
+  }
+  92% {
+    transform: rotate(355deg);
+  }
+  97% {
+    transform: rotate(360deg);
+
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+}
 .info .introduction .face {
-  width: 180px;
-  height: 180px;
+  width: 170px;
+  height: 170px;
   padding: 0 10px;
   border-radius: 50%;
-  border: 1px solid #555;
+  overflow: hidden;
+  /* border: 1px solid #555; */
+  background: #000;
 }
 .info .introduction .face img {
   width: 100%;
@@ -221,6 +266,16 @@
   object-fit: cover;
   border-radius: 50%;
 }
+.info .introduction .face video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 50%;
+  transform: translate(6px, 7px);
+  position: relative;
+}
+
 .info .introduction .hello {
   padding: 30px 0px 30px 20px;
   width: 60%;
@@ -571,8 +626,8 @@
 }
 
 #scrolldown > path {
-  -webkit-animation: ease-in scrolldown 2.8s;
-  animation: ease-in scrolldown 2.8s;
+  -webkit-animation: ease-in scrolldown 6.8s;
+  animation: ease-in scrolldown 6.8s;
   fill: transparent;
   stroke: #777;
   stroke-dasharray: 300;
@@ -588,8 +643,8 @@
   position: absolute;
   top: 8px;
   right: 60px;
-  -webkit-animation: scrollani 2s;
-  animation: scrollani 2s;
+  -webkit-animation: scrollani 6s;
+  animation: scrollani 6s;
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
   z-index: 9999;
@@ -607,6 +662,9 @@
 @-webkit-keyframes scrolldown {
   0% {
     stroke-dashoffset: 600;
+  }
+  50% {
+    stroke-dashoffset: 100;
   }
   100% {
     stroke-dashoffset: 0;
