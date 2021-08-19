@@ -86,7 +86,7 @@ function mobilescroll() {
 mobilescroll();
 function hambergerClick() {
   const hamberger = document.querySelector(".hamberger");
-  const tabnav = document.querySelector("aside");
+  const tabnav = document.querySelector(".hide-nav");
 
   hamberger.addEventListener("click", function () {
     tabnav.classList.toggle("on");
@@ -95,15 +95,15 @@ function hambergerClick() {
 }
 hambergerClick();
 
-// function introOut() {
-//   const intro = document.querySelector(".intro");
-//   // console.log(intro);
-//   // intro.style.display = "none";
-//   setTimeout(function () {
-//     intro.style.display = "none";
-//   }, 4000);
-// }
-// introOut();
+function introOut() {
+  const intro = document.querySelector(".intro");
+  // console.log(intro);
+  // intro.style.display = "none";
+  setTimeout(function () {
+    intro.style.display = "none";
+  }, 4000);
+}
+introOut();
 
 function setCookie(cname, cvalue, min) {
   const exdate = new Date();
@@ -152,3 +152,84 @@ function checkCookie() {
   }
 }
 checkCookie();
+
+function cateTab() {
+  const cateTabs = document.querySelectorAll(".btnbox button");
+  const all = document.querySelector(".btn-all");
+  const develop = document.querySelector(".btn-develop");
+  const design = document.querySelector(".btn-design");
+
+  const filter = document.querySelectorAll(".work");
+
+  // Turns node list into an array
+  const filterArr = Array.from(filter);
+  const tabsArr = Array.from(cateTabs);
+  console.log(design);
+
+  all.addEventListener("click", showAll);
+  develop.addEventListener("click", showdevelop);
+  design.addEventListener("click", showdesign);
+
+  function showAll() {
+    filterArr.forEach(div => {
+      div.classList.remove("remove");
+    });
+    tabsArr.forEach(a => {
+      a.classList.remove("active");
+    });
+    all.classList.add("active");
+  }
+
+  function showdevelop() {
+    filterArr.forEach(div => {
+      div.classList.remove("remove");
+
+      if (!div.dataset.develop) {
+        div.classList.add("remove");
+      }
+    });
+    tabsArr.forEach(a => {
+      a.classList.remove("active");
+    });
+    develop.classList.add("active");
+  }
+
+  function showdesign() {
+    filterArr.forEach(div => {
+      div.classList.remove("remove");
+
+      if (!div.dataset.design) {
+        div.classList.add("remove");
+      }
+    });
+    tabsArr.forEach(a => {
+      a.classList.remove("active");
+    });
+    design.classList.add("active");
+  }
+  function gitremove() {
+    // const gitbtn = document.querySelector(".gitbtn");
+    filterArr.forEach(div => {
+      if (div.dataset.design) {
+        // console.log(div.querySelector(".gitbtn"));
+        div.querySelector(".gitbtn").style.display = "none";
+      }
+    });
+  }
+  gitremove();
+}
+cateTab();
+
+function scrolldownani() {
+  const downani = document.querySelector(".scrollani");
+  window.addEventListener("wheel", function () {
+    downani.style.opacity = "0";
+    console.log("scroll");
+    setTimeout(function () {
+      downani.style.opacity = "1";
+    }, 4000);
+  });
+  // window.addEventListener("scroll", () => {
+  // });
+}
+scrolldownani();

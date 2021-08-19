@@ -29,11 +29,11 @@
   flex-direction: column;
   align-items: center;
   -webkit-animation: fadeout 1 1s;
-          animation: fadeout 1 1s;
+  animation: fadeout 1 1s;
   -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+  animation-delay: 3s;
   -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 .intro.started {
   display: none;
@@ -44,23 +44,23 @@
   font-weight: thin;
   opacity: 0;
   -webkit-animation: up 1 1s;
-          animation: up 1 1s;
+  animation: up 1 1s;
   -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
   -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 .intro p:nth-child(1) {
   -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
+  animation-delay: 0.3s;
 }
 .intro p:nth-child(2) {
   -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
+  animation-delay: 0.6s;
 }
 .intro p:nth-child(3) {
   -webkit-animation-delay: 0.9s;
-          animation-delay: 0.9s;
+  animation-delay: 0.9s;
 }
 
 /*header css code */
@@ -77,27 +77,28 @@
   background: #fff;
   transform: translateX(5000px);
   -webkit-animation: right 1 3s;
-          animation: right 1 3s;
+  animation: right 1 3s;
   -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
   -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
+  animation-delay: 0.4s;
 }
 .header.start {
   -webkit-animation-timing-function: ease-in;
-          animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
   -webkit-animation-delay: 2.6s;
-          animation-delay: 2.6s;
+  animation-delay: 2.6s;
 }
 .header .hamberger {
   width: 30px;
   height: 30px;
 }
 .header .hamberger.on span:nth-child(1) {
-  transform: rotate(45deg) translate(2px, 5px);
+  width: 100%;
+  transform: rotate(45deg) translate(5px, 5px);
 }
 .header .hamberger.on span:nth-child(2) {
-  transform: rotate(-45deg) translateY(-4px);
+  transform: rotate(-45deg);
 }
 .header .hamberger span {
   display: block;
@@ -108,6 +109,10 @@
 }
 .header .hamberger span:nth-child(1) {
   margin-bottom: 5px;
+  width: 65%;
+}
+.header .hamberger:hover span:nth-child(1) {
+  width: 100%;
 }
 .header .logo {
   transform: rotate(-90deg);
@@ -120,9 +125,16 @@
   position: relative;
   transform: rotate(-90deg);
   bottom: 80px;
+  transition: all 0.3s;
+}
+.header .email a {
+  transition: all 0.3s ease-out;
+}
+.header .email a:hover {
+  color: skyblue;
 }
 
-aside {
+.hide-nav {
   position: fixed;
   width: 100%;
   height: 100vh;
@@ -130,33 +142,31 @@ aside {
   display: none;
   background: rgba(255, 255, 255, 0.9);
 }
-aside.on {
+.hide-nav.on {
   display: block;
 }
-aside ul {
+.hide-nav ul {
   width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 0 0 100px;
-  max-width: 640px;
+  max-width: 500px;
   margin: 0 auto;
   transition: all 0.4s;
 }
-aside ul li {
+.hide-nav ul li a {
   font-size: 70px;
   line-height: 1.8;
   color: #000;
+  transition: all 0.3s ease-out;
 }
-aside ul li:nth-child(3) {
-  padding-left: 100px;
+.hide-nav ul li a:hover {
+  color: skyblue;
 }
-aside ul li:nth-child(4) {
-  padding-left: 100px;
-}
-aside ul li:hover {
-  color: royalblue;
+.hide-nav .in-ul {
+  margin-left: 72px;
 }
 
 .home {
@@ -177,17 +187,17 @@ aside ul li:hover {
   box-shadow: 3px 0px 6px #eee;
   transform: translateX(1000%);
   -webkit-animation: right 1 3s;
-          animation: right 1 3s;
+  animation: right 1 3s;
   -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
   -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
+  animation-delay: 0.6s;
 }
 .info.start {
   -webkit-animation-timing-function: ease-in;
-          animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
   -webkit-animation-delay: 2.8s;
-          animation-delay: 2.8s;
+  animation-delay: 2.8s;
 }
 .info > div {
   margin-bottom: 20px;
@@ -208,7 +218,7 @@ aside ul li:hover {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 50%;
 }
 .info .introduction .hello {
@@ -237,17 +247,25 @@ aside ul li:hover {
 .info .introduction .hello .aboutme .about-tit i {
   font-size: 20px;
   padding: 0 2px;
+  transition: all 0.3s;
+  transition: all 0.3s ease-out;
+}
+.info .introduction .hello .aboutme .about-tit i:hover {
+  color: skyblue;
 }
 .info .introduction .hello .aboutme .contack {
   padding: 10px 3px;
   padding-bottom: 10px;
   border-bottom: 1px solid #ddd;
 }
-.info .introduction .hello .aboutme .contack p {
+.info .introduction .hello .aboutme .contack span {
   font-size: 12px;
   line-height: 1.5;
   padding: 3px 0;
   color: #777;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .info .introduction .hello .aboutme .golink {
   padding: 10px 3px;
@@ -259,9 +277,26 @@ aside ul li:hover {
   align-items: center;
   justify-content: space-between;
   padding: 3px 0;
-}
-.info .introduction .hello .aboutme .golink .aboutlink strong {
+  position: relative;
+  transition: all 0.3s;
   font-size: 12px;
+  transition: all 0.3s ease-out;
+}
+.info .introduction .hello .aboutme .golink .aboutlink::before {
+  transition: all 0.3s;
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  background: #ddd;
+  left: 35%;
+  bottom: 50%;
+}
+.info .introduction .hello .aboutme .golink .aboutlink:hover {
+  color: skyblue;
+}
+.info .introduction .hello .aboutme .golink .aboutlink:hover::before {
+  width: 55%;
 }
 .info .introduction .hello .aboutme .golink .aboutlink i {
   color: #777;
@@ -311,13 +346,13 @@ aside ul li:hover {
   padding: 10px;
 }
 .info .skill ul li:hover {
-  border: 1px solid blue;
+  border: 1px solid skyblue;
 }
 .info .skill ul li img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .info .skill ul li p {
   font-size: 10px;
@@ -333,17 +368,17 @@ aside ul li:hover {
   background: #efefef;
   transform: translateX(1000%);
   -webkit-animation: right 1 3s;
-          animation: right 1 3s;
+  animation: right 1 3s;
   -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
   -webkit-animation-delay: 0.9s;
-          animation-delay: 0.9s;
+  animation-delay: 0.9s;
 }
 .work-veiw.start {
   -webkit-animation-timing-function: ease-in;
-          animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
   -webkit-animation-delay: 3.1s;
-          animation-delay: 3.1s;
+  animation-delay: 3.1s;
 }
 .work-veiw .work-list {
   position: absolute;
@@ -358,6 +393,22 @@ aside ul li:hover {
   position: relative;
   overflow: hidden;
   transition: all 0.4s;
+  height: 80%;
+}
+.work-veiw .work-list .work:nth-child(odd) {
+  background: #fff;
+  border-radius: 0 0 20px 20px;
+}
+.work-veiw .work-list .work:nth-child(odd) img {
+  border-radius: 0 0 20px 20px;
+}
+.work-veiw .work-list .work:nth-child(even) {
+  background: #fff;
+  margin: auto 0 0 0;
+  border-radius: 20px 20px 0 0;
+}
+.work-veiw .work-list .work:nth-child(even) img {
+  border-radius: 20px 20px 0 0;
 }
 .work-veiw .work-list .work .over {
   position: absolute;
@@ -414,7 +465,7 @@ aside ul li:hover {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .work-veiw .work-list .work .work-subject em {
   font-size: 60px;
@@ -478,23 +529,117 @@ aside ul li:hover {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   transition: all 0.4s;
 }
-.work-veiw .work-list .work-up {
-  height: 80%;
+
+.remove {
+  display: none;
+}
+
+.btnbox {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 5px 0 0 0;
+  padding: 5px 10px 10px;
+}
+.btnbox p {
+  text-align: center;
+  margin-bottom: 5px;
+  color: #333;
+  font-size: 10px;
+}
+.btnbox button {
+  background: none;
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-right: 3px;
+  transition: all 0.3s;
+  font-size: 10px;
+}
+.btnbox button:hover {
+  box-shadow: inset 0 0 3px #777;
+}
+.btnbox button.active {
+  color: skyblue;
   background: #fff;
-  border-radius: 0 0 20px 20px;
 }
-.work-veiw .work-list .work-up img {
-  border-radius: 0 0 20px 20px;
+
+#scrolldown > path {
+  -webkit-animation: ease-in scrolldown 2.8s;
+  animation: ease-in scrolldown 2.8s;
+  fill: transparent;
+  stroke: #777;
+  stroke-dasharray: 300;
+  stroke-width: 1px;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  stroke-linecap: round;
 }
-.work-veiw .work-list .work-down {
-  height: 80%;
-  background: #fff;
-  margin: auto 0 0 0;
-  border-radius: 20px 20px 0 0;
+
+.scrollani {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  top: 8px;
+  right: 60px;
+  -webkit-animation: scrollani 2s;
+  animation: scrollani 2s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  z-index: 9999;
+  transition: all 0.4s;
 }
-.work-veiw .work-list .work-down img {
-  border-radius: 20px 20px 0 0;
+.scrollani p {
+  font-size: 6px;
+  text-align: center;
+  transform: translateY(-11px);
+  letter-spacing: 4px;
+  line-height: 1.5;
+  color: #777;
+}
+
+@-webkit-keyframes scrolldown {
+  0% {
+    stroke-dashoffset: 600;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes scrolldown {
+  0% {
+    stroke-dashoffset: 600;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes scrollani {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes scrollani {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }

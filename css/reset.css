@@ -26,7 +26,7 @@ textarea {
   color: #777;
   /* font-family: "Nanum Myeongjo", serif;
   font-family: "Noto Sans KR", sans-serif; */
-  font-family: "Cormorant Garamond", serif;
+  font-family: Neutral Face, sans-serif;
 
   font-size: 14px;
 }
@@ -60,7 +60,7 @@ b {
 body {
   font-size: 14px;
   /* font-family: "Cormorant Garamond", serif; */
-  font-family: Neutral Face;
+  font-family: Neutral Face, sans-serif;
   letter-spacing: 1px;
 
   /* 
