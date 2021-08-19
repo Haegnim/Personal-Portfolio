@@ -1,0 +1,90 @@
+.header {
+  @include size($w: 60px, $h: 100vh, $p: 20px 0);
+  @include flex();
+  flex-direction: column;
+  box-shadow: 3px 0px 6px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  background: #fff;
+  transform: translateX(5000px);
+  animation: right 1 3s;
+  animation-fill-mode: forwards;
+  animation-delay: $animation-header + s;
+  &.start {
+    animation-timing-function: $animation;
+    animation-delay: $animation-header + $animation-start;
+  }
+  .hamberger {
+    @include size($w: 30px, $h: $w);
+    &:hover span:nth-child(1) {
+      width: 100%;
+    }
+    &.on {
+      span {
+        &:nth-child(1) {
+          transform: rotate(45deg) translate(5px, 5px);
+        }
+        &:nth-child(2) {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+    span {
+      display: block;
+      @include size($w: 100%, $h: 2px);
+      background: #000;
+      transition: all 0.4s;
+      &:nth-child(1) {
+        margin-bottom: 5px;
+        width: 65%;
+      }
+    }
+  }
+  .logo {
+    transform: rotate(-90deg);
+    border: 1px solid $border-main;
+    padding: 5px 20px;
+    border-radius: 50%;
+    margin-bottom: 70px;
+  }
+  .email {
+    position: relative;
+    transform: rotate(-90deg);
+    bottom: 80px;
+    transition: all 0.3s;
+
+    a {
+      transition: all 0.3s ease-out;
+      &:hover {
+        color: $hover-color;
+      }
+    }
+  }
+}
+hide-nav {
+  @include size($w: 100%, $h: 100vh);
+  position: fixed;
+  z-index: 99;
+  display: none;
+  background: rgba(255, 255, 255, 0.9);
+  &.on {
+    display: block;
+  }
+  ul {
+    @include size($w: 100%, $h: 100vh, $p: 0 0 100px, $m: 0 auto);
+    @include flex($ai: null);
+    flex-direction: column;
+    max-width: 640px;
+    transition: all 0.4s;
+    li {
+      a {
+        font-size: 70px;
+        line-height: 1.8;
+        color: $main-color;
+        transition: all 0.3s ease-out;
+        &:hover {
+          color: $hover-color;
+        }
+      }
+    }
+  }
+}

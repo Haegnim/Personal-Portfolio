@@ -1,0 +1,153 @@
+.info {
+  @include size($w: 30%, $h: auto, $p: 60px 60px);
+  background: #fff;
+  // border-right: 1px solid #ddd;
+  position: relative;
+  transition: all 0.4s;
+  box-shadow: 3px 0px 6px $shadow;
+  transform: translateX(1000%);
+  animation: right 1 3s;
+  animation-fill-mode: forwards;
+  animation-delay: $animation-info + s;
+  &.start {
+    animation-timing-function: $animation;
+    animation-delay: $animation-info + $animation-start;
+  }
+
+  & > div {
+    margin-bottom: 20px;
+  }
+  .introduction {
+    @include flex();
+    .face {
+      @include size($w: 180px, $h: $w, $p: 0 10px);
+      border-radius: 50%;
+      border: 1px solid $border-sub-middle;
+      img {
+        @include img();
+        border-radius: 50%;
+      }
+    }
+    .hello {
+      @include size($w: 60%, $p: 30px 0px 30px 20px);
+      @include flex($ai: null);
+      flex-direction: column;
+      .aboutme {
+        @include flex($ai: null);
+        flex-direction: column;
+        .about-tit {
+          padding: 10px 3px 10px 0;
+          @include flex();
+          border-bottom: 1px solid $border-sub-light;
+          h4 {
+            font-size: $font-com;
+          }
+          i {
+            font-size: 20px;
+            padding: 0 2px;
+          }
+        }
+        .contack {
+          padding: 10px 3px 10px 0;
+          border-bottom: 1px solid $border-sub-light;
+          p {
+            font-size: 12px;
+            line-height: 1.5;
+            padding: 3px 0;
+            color: $border-sub-middle;
+          }
+        }
+        .golink {
+          padding: 10px 3px;
+          border-bottom: 1px solid $border-sub-light;
+          .aboutlink {
+            @include size($w: 100%, $p: 3px 0);
+            @include flex();
+            position: relative;
+            font-size: 12px;
+            transition: all 0.3s ease-out;
+            font-size: 12px;
+            &:hover {
+              color: $hover-color;
+              &::before {
+                width: 55%;
+              }
+            }
+            &::before {
+              transition: all 0.3s;
+              content: "";
+              position: absolute;
+              width: 0%;
+              height: 1px;
+              background: #ddd;
+              left: 35%;
+              bottom: 50%;
+            }
+            i {
+              color: $middle-color;
+              font-size: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .imymemine {
+    font-size: 19px;
+    padding-bottom: 60px;
+    // line-height: 1.8;
+    li {
+      border-bottom: 1px solid $border-sub-light;
+      padding: 15px 0 5px;
+    }
+  }
+  .skill {
+    font-size: 14px;
+    // line-height: 1.8;
+    b {
+      border-bottom: 1px solid #333;
+      width: 100%;
+      display: block;
+      padding-bottom: 3px;
+      margin-bottom: 10px;
+    }
+    & > div {
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 10px;
+      padding: 20px 0 15px;
+    }
+    em {
+      font-size: 12px;
+      color: #777;
+      margin-left: 8px;
+    }
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+
+      // align-content: space-between;
+      padding: 5px 0;
+      li {
+        width: 60px;
+        // height: 100px;
+        border: 1px solid #fff;
+        border-radius: 20px;
+        transition: all 0.4s;
+        background: #efefef;
+        margin: 5px;
+        padding: 10px;
+        &:hover {
+          border: 1px solid blue;
+        }
+        img {
+          @include img($fit: contain);
+        }
+        p {
+          font-size: 10px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
