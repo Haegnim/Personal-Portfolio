@@ -40,9 +40,8 @@
         <span></span>
         <span></span>
       </div>
-      <div class="logo">
-        <h1></h1>
-        <a href=""> hyekyeuong </a>
+      <div class="logo" onclick=logoclick()>
+        <h3>hyekyeuong</h3>
       </div>
       <div class="email">
         <a href="mailto:heagim@gmail.com">heagim@gmail.com</a>
@@ -170,19 +169,19 @@
         </div>
       </section>
 
+      <div class="btnbox">
+        <p>chess cate</p>
+        <button type="button" class="btn-all active">ALL</button>
+        <button type="button" class="btn-develop">Develop</button>
+        <button type="button" class="btn-design">Design</button>
+      </div>
+      <div class="scrollani">
+        <svg id="scrolldown" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <path class="cls-1" d="M35.52,17.84a34.55,34.55,0,1,0,15.37-3.6V64.81L35.12,50.11" />
+        </svg>
+        <p>scroll<br>down</p>
+      </div>
       <section class="work-veiw">
-        <div class="btnbox">
-          <p>chess cate</p>
-          <button type="button" class="btn-all active">ALL</button>
-          <button type="button" class="btn-develop">Develop</button>
-          <button type="button" class="btn-design">Design</button>
-        </div>
-        <div class="scrollani">
-          <svg id="scrolldown" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <path class="cls-1" d="M35.52,17.84a34.55,34.55,0,1,0,15.37-3.6V64.81L35.12,50.11" />
-          </svg>
-          <p>scroll<br>down</p>
-        </div>
         <ul class="work-list">
           <?php
         include $_SERVER['DOCUMENT_ROOT']."/connect/db_conn.php";

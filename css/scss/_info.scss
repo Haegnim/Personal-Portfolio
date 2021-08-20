@@ -1,10 +1,11 @@
 .info {
   @include size($w: 30%, $h: auto, $p: 60px 60px);
-  background: #fff;
+  background: $con-color;
   // border-right: 1px solid #ddd;
   position: relative;
   transition: all 0.4s;
-  box-shadow: 3px 0px 6px $shadow;
+  color: $main-color;
+  // box-shadow: 3px 0px 6px $shadow;
   transform: translateX(1000%);
   animation: right 1 3s;
   animation-fill-mode: forwards;
@@ -19,13 +20,36 @@
   }
   .introduction {
     @include flex();
+    .faceani {
+      position: relative;
+      margin: 0 auto;
+    }
+    .face-hello {
+      @include size($w: 200px, $h: 200px);
+      position: absolute;
+      background: url(/MY-P/img/messeg.svg) no-repeat center center;
+      left: -15px;
+      top: -15px;
+      opacity: 0;
+      transition: all 0.3s;
+      &.on {
+        animation: face-hello 6s 1;
+      }
+    }
     .face {
-      @include size($w: 180px, $h: $w, $p: 0 10px);
+      @include size($w: 170px, $h: 170px, $p: 0 10px);
       border-radius: 50%;
-      border: 1px solid $border-sub-middle;
+      overflow: hidden;
+      background: #000;
       img {
         @include img();
         border-radius: 50%;
+      }
+      video {
+        @include img();
+        border-radius: 50%;
+        transform: translate(6px, 7px);
+        position: relative;
       }
     }
     .hello {
@@ -36,30 +60,43 @@
         @include flex($ai: null);
         flex-direction: column;
         .about-tit {
-          padding: 10px 3px 10px 0;
+          padding: 10px 3px 3px 0;
           @include flex();
-          border-bottom: 1px solid $border-sub-light;
+          border-bottom: 1px solid $border-main;
           h4 {
-            font-size: $font-com;
+            font-size: 14px;
           }
           i {
             font-size: 20px;
             padding: 0 2px;
+            transition: all 0.3s ease-out;
+            color: #333;
+            &:hover {
+              color: $hover-color;
+            }
           }
         }
         .contack {
           padding: 10px 3px 10px 0;
+          padding-bottom: 10px;
           border-bottom: 1px solid $border-sub-light;
-          p {
+          span {
+            @include flex();
             font-size: 12px;
             line-height: 1.5;
             padding: 3px 0;
-            color: $border-sub-middle;
+            color: $sub-middle;
+            a {
+              color: $sub-middle;
+            }
           }
         }
         .golink {
           padding: 10px 3px;
           border-bottom: 1px solid $border-sub-light;
+          a {
+            color: $sub-middle;
+          }
           .aboutlink {
             @include size($w: 100%, $p: 3px 0);
             @include flex();
@@ -74,17 +111,16 @@
               }
             }
             &::before {
+              @include size($w: 0%, $h: 1px);
               transition: all 0.3s;
               content: "";
               position: absolute;
-              width: 0%;
-              height: 1px;
               background: #ddd;
               left: 35%;
               bottom: 50%;
             }
             i {
-              color: $middle-color;
+              color: $sub-middle;
               font-size: 24px;
             }
           }
@@ -105,16 +141,13 @@
     font-size: 14px;
     // line-height: 1.8;
     b {
-      border-bottom: 1px solid #333;
-      width: 100%;
+      border-bottom: 1px solid $border-sub-bold;
+      @include size($w: 100%, $p: 0 0 3px, $m: 0 0 10px);
       display: block;
-      padding-bottom: 3px;
-      margin-bottom: 10px;
     }
     & > div {
       border-bottom: 1px solid #ddd;
-      margin-bottom: 10px;
-      padding: 20px 0 15px;
+      @include size($p: 20px 0 15px, $m: 0 0 10px);
     }
     em {
       font-size: 12px;
@@ -122,23 +155,17 @@
       margin-left: 8px;
     }
     ul {
-      display: flex;
+      @include flex($jc: flex-start, $ai: null);
       flex-wrap: wrap;
-      justify-content: flex-start;
-
-      // align-content: space-between;
       padding: 5px 0;
       li {
-        width: 60px;
-        // height: 100px;
-        border: 1px solid #fff;
+        @include size($w: 60px, $p: 10px, $m: 5px);
+        border: 1px solid $back-color;
         border-radius: 20px;
         transition: all 0.4s;
-        background: #efefef;
-        margin: 5px;
-        padding: 10px;
+        background: $back-color;
         &:hover {
-          border: 1px solid blue;
+          border: 1px solid $hover-color;
         }
         img {
           @include img($fit: contain);

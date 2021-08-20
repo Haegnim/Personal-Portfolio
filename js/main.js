@@ -1,14 +1,14 @@
 function resize() {
-  console.log("resize");
+  // console.log("resize");
   window.addEventListener("resize", function () {
     if (window.innerWidth > 768) {
-      console.log("!resize");
+      // console.log("!resize");
       horawheel();
     } else {
       const workList = document.querySelector(".work-list");
       workList.style.width = "100%";
       workList.style.transform = `0px`;
-      console.log("!resize");
+      // console.log("!resize");
     }
   });
 
@@ -16,26 +16,25 @@ function resize() {
   //   horawheel();
   //   workList.style.width = "100%";
   //   workList.style.transform = `0px`;
-  //   console.log("resize");
+  // console.log("resize");
   // });
 }
-resize();
+// resize();
 
 function horawheel() {
   const workList = document.querySelector(".work-list");
+  const Home = document.querySelector(".home");
   const work = document.querySelectorAll(".work-list li");
   const workVeiw = document.querySelector(".work-veiw");
-  const Home = document.querySelector(".home");
   const Info = document.querySelector(".info");
+  const downani = document.querySelector(".scrollani");
+
   // let scrollX = 1;
   // const workVeiwX = workVeiw.offsetWidth;
   const workX = work[0].offsetWidth;
   const HomeX = Home.offsetWidth;
   const InfoX = Info.offsetWidth;
   // console.log(workVeiwX);
-
-  const workListX = work.length * (workX + 70) + 70;
-  workList.style.width = workListX + "px";
 
   let offset = 0;
   window.addEventListener("wheel", e => {
@@ -44,10 +43,10 @@ function horawheel() {
       if (Math.abs(e.deltaY) < 120) {
         // console.log("delay");
         e.deltaX = 0;
-        offset += Math.sign(e.deltaY) * 25;
+        offset += Math.sign(e.deltaY) * 10;
       } else {
         offset += Math.sign(e.deltaY) * 150;
-        console.log("delay");
+        // console.log("delay");
       }
     } else {
       offset = 0;
@@ -55,35 +54,70 @@ function horawheel() {
     // console.log(offset);
     if (offset >= 120) {
       Info.style.opacity = 0;
-      Home.style.background = "#fff";
+      Home.style.background = "#efefef";
       workVeiw.style.background = "none";
       // console.log("wheel down");
     } else {
       Info.style.opacity = 1;
       Home.style.background = "#efefef";
       workVeiw.style.background = "#efefef";
+      Home.scrollTo(0, 0);
     }
 
     if (offset < 0) {
       offset = 0;
-    } else if (offset > workListX - workX) {
-      offset = workListX - workX;
+    } else if (offset > workList.offsetWidth) {
+      offset = workList.offsetWidth;
+      downani.style.opacity = "0";
     }
-    workList.style.transform = `translateX(-${offset}px`;
+
+    if (offset <= 100) {
+      workList.style.transform = `translateX(0px)`;
+    } else if (offset >= 600) {
+      Home.scrollTo(offset, 0);
+    } else {
+      workList.style.transform = `translateX(-${offset}px`;
+      Home.scrollTo(0, 0);
+    }
   });
 }
 
 horawheel();
 
-function mobilescroll() {
-  const workList = document.querySelector(".work-list");
+// function mobilescroll() {
+//   const workList = document.querySelector(".work-list");
 
-  if (window.innerWidth <= 768) {
-    workList.style.width = "100%";
-    workList.style.transform = `0px`;
-  }
+//   if (window.innerWidth <= 768) {
+//     workList.style.width = "100%";
+//     workList.style.transform = `0px`;
+//   }
+// }
+// mobilescroll();
+
+function headerAni() {
+  const header = document.querySelector("header");
+  // console.log(header);
+
+  document.addEventListener("scroll", function () {
+    let winTop = document.documentElement.scrollTop;
+    // console.log(winTop);
+    const headerTP = 60;
+    // console.log(headerTP);
+    if (winTop >= headerTP) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  });
 }
-mobilescroll();
+headerAni();
+
+function logoclick() {
+  // console.log(document.documentElement);
+  // console.log(document.documentElement.scrollTop);
+  // window.scrollTo(0, 0);
+}
+
 function hambergerClick() {
   const hamberger = document.querySelector(".hamberger");
   const tabnav = document.querySelector(".hide-nav");
@@ -127,7 +161,7 @@ function getCookie(cname) {
       return c.substring(name.length, c.length);
     }
   }
-  console.log("get");
+  // console.log("get");
   return "";
 }
 getCookie(open);
@@ -138,6 +172,7 @@ function checkCookie() {
   const Home = document.querySelector(".home");
   const Info = document.querySelector(".info");
   const header = document.querySelector(".header");
+  const btnbox = document.querySelector(".btnbox");
 
   const checkIntro = getCookie("open");
   if (checkIntro != "") {
@@ -149,6 +184,7 @@ function checkCookie() {
     Home.classList.toggle("start");
     Info.classList.toggle("start");
     header.classList.toggle("start");
+    btnbox.classList.toggle("start");
   }
 }
 checkCookie();
@@ -164,7 +200,7 @@ function cateTab() {
   // Turns node list into an array
   const filterArr = Array.from(filter);
   const tabsArr = Array.from(cateTabs);
-  console.log(design);
+  // console.log(design);
 
   all.addEventListener("click", showAll);
   develop.addEventListener("click", showdevelop);
@@ -224,13 +260,11 @@ function scrolldownani() {
   const downani = document.querySelector(".scrollani");
   window.addEventListener("wheel", function () {
     downani.style.opacity = "0";
-    console.log("scroll");
+    // console.log("scroll");
     setTimeout(function () {
       downani.style.opacity = "1";
     }, 4000);
   });
-  // window.addEventListener("scroll", () => {
-  // });
 }
 scrolldownani();
 

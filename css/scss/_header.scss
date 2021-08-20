@@ -4,23 +4,28 @@
   flex-direction: column;
   box-shadow: 3px 0px 6px rgba(0, 0, 0, 0.1);
   z-index: 999;
-  background: #fff;
+  background: $con-color;
   transform: translateX(5000px);
   animation: right 1 3s;
   animation-fill-mode: forwards;
   animation-delay: $animation-header + s;
+  color: $main-color;
+  &.sticky {
+    position: fixed;
+  }
   &.start {
     animation-timing-function: $animation;
     animation-delay: $animation-header + $animation-start;
   }
   .hamberger {
-    @include size($w: 30px, $h: $w);
+    @include size($w: 30px, $h: 30px);
     &:hover span:nth-child(1) {
       width: 100%;
     }
     &.on {
       span {
         &:nth-child(1) {
+          width: 100%;
           transform: rotate(45deg) translate(5px, 5px);
         }
         &:nth-child(2) {
@@ -31,7 +36,7 @@
     span {
       display: block;
       @include size($w: 100%, $h: 2px);
-      background: #000;
+      background: $main-color;
       transition: all 0.4s;
       &:nth-child(1) {
         margin-bottom: 5px;
@@ -41,10 +46,13 @@
   }
   .logo {
     transform: rotate(-90deg);
-    border: 1px solid $border-main;
+    border: 1px solid $main-color;
     padding: 5px 20px;
     border-radius: 50%;
     margin-bottom: 70px;
+    h3 {
+      font-size: 14px;
+    }
   }
   .email {
     position: relative;
@@ -54,13 +62,14 @@
 
     a {
       transition: all 0.3s ease-out;
+      color: $main-color;
       &:hover {
         color: $hover-color;
       }
     }
   }
 }
-hide-nav {
+.hide-nav {
   @include size($w: 100%, $h: 100vh);
   position: fixed;
   z-index: 99;
@@ -69,11 +78,14 @@ hide-nav {
   &.on {
     display: block;
   }
+  .in-ul {
+    margin-left: 72px;
+  }
   ul {
     @include size($w: 100%, $h: 100vh, $p: 0 0 100px, $m: 0 auto);
-    @include flex($ai: null);
+    @include flex($jc: center, $ai: null);
     flex-direction: column;
-    max-width: 640px;
+    max-width: 500px;
     transition: all 0.4s;
     li {
       a {

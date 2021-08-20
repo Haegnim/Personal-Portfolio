@@ -24,7 +24,7 @@
   .btnbox {
     bottom: auto;
     border-radius: 0 0 0 5px;
-    top: 0;
+    top: 60px;
   }
   .intro p {
     font-size: 32px;
@@ -44,6 +44,9 @@
   .header .logo {
     transform: rotate(0) translateX(50%);
     margin-bottom: 0;
+  }
+  .header .logo h3 {
+    font-size: 16px;
   }
   .header .email {
     transform: rotate(0);
@@ -127,6 +130,7 @@
   }
   .info {
     width: 100%;
+    padding: 30px;
     /* height: 100vh; */
   }
   .info .introduction {
@@ -134,6 +138,9 @@
   }
   .info .introduction .faceani {
     margin-right: 15px;
+  }
+  .info .introduction .face-hello {
+    animation: face-hello 6s 3000;
   }
   .info .introduction .hello {
     width: 65%;
@@ -148,6 +155,8 @@
   .work-veiw .work-list {
     flex-direction: column;
     position: static;
+    width: 100%;
+    transform: translateX(0);
   }
   .work-veiw .work-list .work {
     width: 100%;
@@ -181,8 +190,17 @@
   .work-veiw .work-list .work .work-subject .skilltoll {
     margin: 0 auto;
   }
-  .work-veiw .work-list .work .work-link {
-    display: none;
+  .work-veiw .work-list .work .work-link a {
+    border: 2px solid #fff;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 9px;
+    border-radius: 15px;
+    width: auto;
+  }
+  .work-veiw .work-list .work .work-link a:nth-child(1) {
+    margin-top: 12px;
   }
 }
 @media screen and (max-width: 500px) {

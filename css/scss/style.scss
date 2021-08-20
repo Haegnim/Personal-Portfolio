@@ -6,15 +6,26 @@ $animation-workVeiw: 0.9;
 $animation-start: 2.2s;
 
 //text color
-$main-color: #000;
-$hover-color: skyblue;
+$main-color: #2c599d;
+$sub-bold: #333;
+$sub-middle: #777;
+$sub-light: #ddd;
 
-// font-size
+$hover-color: #f98125;
+$back-color: #efefef;
+$con-color: #fff;
+$con-font-color: #fff;
+$btn-back-color: rgba(#000, 0.2);
+
+$button-color: $main-color;
+$button-effect: #fff;
+$button-hover-color: #fff;
 
 //border-line color
-$border-main: #000;
-$border-sub-middle: #777;
-$border-sub-light: #ddd;
+$border-main: $main-color;
+$border-sub-bold: $sub-bold;
+$border-sub-middle: $sub-middle;
+$border-sub-light: $sub-light;
 
 //shadow color
 $shadow: rgba(0, 0, 0, 0.2);
@@ -40,7 +51,7 @@ $shadow: rgba(0, 0, 0, 0.2);
   display: flex;
   overflow: hidden;
   height: 100vh;
-  background: #efefef;
+  background: $back-color;
   // background: #fff;
 }
 .blind {
@@ -99,211 +110,91 @@ $shadow: rgba(0, 0, 0, 0.2);
   width: 100%;
   display: flex;
   transition: all 1s;
-  overflow: hidden;
+  overflow: scroll;
   scroll-behavior: smooth;
+  height: inherit;
   // background: #efefef;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 @import "info";
+@import "work-veiw.scss";
 
-.work-veiw {
-  width: 70%;
-  height: auto;
+.remove {
+  display: none;
+}
 
-  overflow: visible;
-  transition: all 0.4s;
-  position: relative;
-  background: #efefef;
+.btnbox {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 5px 0 0 0;
+  padding: 5px 10px 10px;
   transform: translateX(1000%);
   animation: right 1 3s;
   animation-fill-mode: forwards;
   animation-delay: $animation-workVeiw + s;
   &.start {
     animation-timing-function: $animation;
-
     animation-delay: $animation-workVeiw + $animation-start;
   }
-  .work-list {
-    position: absolute;
-    display: flex;
-    height: 100%;
-    // width: 200%;
-    transition: all 0.4s;
-    // background: #efefef;
-
-    // transform: translateX(-100px);
-    .work {
-      margin: 0 70px;
-      width: 600px;
-      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-      position: relative;
-      overflow: hidden;
-      transition: all 0.4s;
-      .over {
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: block;
-        width: 110%;
-        height: 110%;
-        // background: linear-gradient(
-        //   144deg,
-        //   #00b0f6 0%,
-        //   rgba(255, 249, 53, 0) 48%,
-        //   rgba(255, 255, 255, 0) 100%
-        // );
-        opacity: 1;
-        transition: all 0.4s;
-        background-blend-mode: multiply;
-      }
-      .work-subject {
-        position: absolute;
-        padding: 60px 60px;
-        color: #fff;
-        width: 100%;
-        height: 100%;
-        font-size: 20px;
-        display: flex;
-        flex-direction: column;
-        text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
-        transition: all 0.4s;
-
-        .cata {
-          padding: 8px 3px 5px;
-          background: #fff;
-          color: #000;
-          font-size: 10px;
-          width: 90px;
-          text-align: center;
-          border-radius: 3px;
-          position: absolute;
-          right: 60px;
-          text-shadow: none;
-        }
-        .skilltoll {
-          // width: 70%;
-          display: flex;
-          align-items: center;
-          justify-content: flex-start;
-          padding: 5px 10px;
-          border-radius: 20px;
-          // border: 1px solid #fff;
-          // background: rgba(#000, 0.2);
-          background: #333;
-          width: fit-content;
-          li {
-            width: 25px;
-            height: 25px;
-            margin: 0 8px;
-            img {
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-            }
-          }
-        }
-
-        em {
-          font-size: 60px;
-          // font-weight: thin;
-          font-family: "Poiret One", cursive;
-          margin: -9px 0 20px;
-        }
-        h4 {
-          margin: 14px 0 9px;
-          font-size: 65px;
-        }
-        p {
-          font-size: 14px;
-          line-height: 1.7;
-        }
-      }
-      .work-link {
-        $button-color: #fff;
-        $button-hover: #000;
-        position: absolute;
-        bottom: 60px;
-        right: 50px;
-        display: flex;
-        flex-direction: column;
-        a {
-          font-size: 14px;
-          text-shadow: none;
-          display: block;
-          background: rgba(0, 0, 0, 0.2);
-          padding: 20px;
-          width: 200px;
-          color: $button-color;
-          // height: 50%;
-          text-align: center;
-          margin-bottom: 10px;
-          border-radius: 5px;
-          border: 3px solid $button-color;
-          line-height: 0.8;
-          overflow: hidden;
-          position: relative;
-          z-index: 1;
-          transition: all 0.8s;
-          &::after {
-            transition: all 0.8s;
-            content: "";
-            width: 15%;
-            height: 100%;
-            z-index: -1;
-            position: absolute;
-            top: 0;
-            left: -50px;
-            background: #fff;
-            // border: 2px solid #00b0f6;
-            // border-radius: 30px;
-            transform: skewX(-20deg);
-            opacity: 0;
-            // mix-blend-mode: multiply;
-          }
-          &:hover {
-            color: $button-hover;
-          }
-          &:hover::after {
-            left: 250px;
-            opacity: 1;
-          }
-        }
-      }
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: all 0.4s;
-      }
-      // &:hover {
-      //   transform: scale(105%);
-      //   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1);
-      //   span {
-      //     opacity: 0;
-      //   }
-      //   // .work-subject {
-      //   //   color: rgba(221, 18, 117, 1);
-      //   // }
-      // }
+  p {
+    text-align: center;
+    margin-bottom: 5px;
+    color: $sub-bold;
+    font-size: 10px;
+  }
+  button {
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-right: 3px;
+    transition: all 0.3s;
+    font-size: 10px;
+    &:hover {
+      box-shadow: inset 0 0 3px $shadow;
     }
-    .work-up {
-      // width: 500px;
-      height: 80%;
+    &.active {
+      color: $hover-color;
       background: #fff;
-      border-radius: 0 0 20px 20px;
-      img {
-        border-radius: 0 0 20px 20px;
-      }
-    }
-    .work-down {
-      // width: 500px;
-      height: 80%;
-      background: #fff;
-      margin: auto 0 0 0;
-      border-radius: 20px 20px 0 0;
-      img {
-        border-radius: 20px 20px 0 0;
-      }
     }
   }
+}
+
+#scrolldown > path {
+  -webkit-animation: ease-in scrolldown 6.8s;
+  animation: ease-in scrolldown 6.8s;
+  fill: transparent;
+  stroke: $sub-middle;
+  stroke-dasharray: 300;
+  stroke-width: 1px;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  stroke-linecap: round;
+}
+
+.scrollani {
+  @include size($w: 120px, $h: 120px);
+  position: absolute;
+  top: 8px;
+  right: 60px;
+  -webkit-animation: scrollani 6s;
+  animation: scrollani 6s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  z-index: 9999;
+  transition: all 0.4s;
+}
+.scrollani p {
+  font-size: 6px;
+  text-align: center;
+  transform: translateY(-11px);
+  letter-spacing: 4px;
+  line-height: 1.5;
+  color: $sub-middle;
 }

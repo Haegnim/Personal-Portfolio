@@ -1,0 +1,146 @@
+.work-veiw {
+  @include size($w: 70%, $h: auto);
+  overflow: visible;
+  transition: all 0.4s;
+  position: relative;
+  background: $back-color;
+  transform: translateX(1000%);
+  animation: right 1 3s;
+  animation-fill-mode: forwards;
+  animation-delay: $animation-workVeiw + s;
+  &.start {
+    animation-timing-function: $animation;
+    animation-delay: $animation-workVeiw + $animation-start;
+  }
+}
+.work-list {
+  position: absolute;
+  display: flex;
+  height: 100%;
+  transition: all 0.4s;
+  .work {
+    @include size($w: 600px, $h: 80%, $m: 0 70px);
+    box-shadow: 0px 10px 20px $shadow;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s;
+    &:nth-child(odd) {
+      overflow: hidden;
+      border-radius: 0 0 20px 20px;
+    }
+    &:nth-child(even) {
+      overflow: hidden;
+      margin: auto 0 0 0;
+      border-radius: 20px 20px 0 0;
+    }
+    .over {
+      @include size($w: 110%, $h: 110%);
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      opacity: 1;
+      transition: all 0.4s;
+    }
+    .work-subject {
+      @include size($w: 100%, $h: 100%, $p: 60px);
+      position: absolute;
+      color: $con-font-color;
+      font-size: 20px;
+      display: flex;
+      flex-direction: column;
+      text-shadow: 0px 3px 6px $shadow;
+      transition: all 0.4s;
+
+      .cata {
+        @include size($w: 90px, $p: 8px 3px 5px);
+        background: rgba($color: $con-color, $alpha: 0.7);
+        color: $hover-color;
+        font-size: 12px;
+        font-family: Georgia, Neutral Face, sans-serif;
+        font-style: italic;
+        text-align: center;
+        border-radius: 3px;
+        position: absolute;
+        right: 60px;
+        text-shadow: none;
+      }
+      .skilltoll {
+        // width: 70%;
+        @include flex($jc: flex-start);
+        padding: 5px 10px;
+        border-radius: 20px;
+        background: $border-sub-bold;
+        width: fit-content;
+        li {
+          @include size($w: 25px, $h: 25px, $m: 0 8px);
+          img {
+            @include img();
+          }
+        }
+      }
+
+      em {
+        font-size: 60px;
+        font-family: "Poiret One", cursive;
+        margin: -9px 0 20px;
+      }
+      h4 {
+        margin: 14px 0 9px;
+        font-size: 65px;
+      }
+      p {
+        font-size: 14px;
+        line-height: 1.7;
+      }
+    }
+    .work-link {
+      position: absolute;
+      bottom: 60px;
+      right: 50px;
+      display: flex;
+      flex-direction: column;
+      a {
+        @include size($w: 200px, $p: 20px, $m: 0 0 10px);
+        font-size: 14px;
+        text-shadow: none;
+        display: block;
+        background: $btn-back-color;
+        color: $button-color;
+        // height: 50%;
+        text-align: center;
+        border-radius: 5px;
+        border: 3px solid $button-color;
+        line-height: 0.8;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+        transition: all 0.8s;
+        &::after {
+          @include size($w: 15%, $h: 100%);
+          transition: all 0.8s;
+          content: "";
+          z-index: -1;
+          position: absolute;
+          top: 0;
+          left: -50px;
+          background: $button-effect;
+          transform: skewX(-20deg);
+          opacity: 0;
+        }
+        &:hover {
+          color: $button-hover-color;
+        }
+        &:hover::after {
+          left: 250px;
+          opacity: 1;
+        }
+      }
+    }
+
+    img {
+      @include img();
+      transition: all 0.4s;
+    }
+  }
+}
