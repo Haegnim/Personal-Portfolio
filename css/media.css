@@ -45,8 +45,8 @@
     transform: rotate(0) translateX(50%);
     margin-bottom: 0;
   }
-  .header .logo h3 {
-    font-size: 16px;
+  .header .logo:hover {
+    animation: none;
   }
   .header .email {
     transform: rotate(0);
@@ -202,6 +202,9 @@
   .work-veiw .work-list .work .work-link a:nth-child(1) {
     margin-top: 12px;
   }
+  .work-list .work .tag {
+    display: none;
+  }
 }
 @media screen and (max-width: 500px) {
   .hide-nav ul {
@@ -229,6 +232,9 @@
   .info .introduction .hello {
     width: 100%;
     padding: 30px 3px;
+  }
+  .info .introduction .faceani {
+    margin: 0 auto;
   }
   .work-veiw .work-list .work .work-subject .cata {
     width: 60px;

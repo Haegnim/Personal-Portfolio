@@ -103,3 +103,17 @@
     transform: translateY(0px);
   }
 }
+@keyframes rota90 {
+  0% {
+    transform: rotate(-90deg);
+  }
+  35% {
+    transform: rotate(-95deg);
+  }
+  75% {
+    transform: rotate(-85deg);
+  }
+  100% {
+    transform: rotate(-90deg);
+  }
+}

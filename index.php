@@ -40,7 +40,7 @@
         <span></span>
         <span></span>
       </div>
-      <div class="logo" onclick=logoclick()>
+      <div class="logo" onclick="logoclick()">
         <h3>hyekyeuong</h3>
       </div>
       <div class="email">
@@ -208,6 +208,7 @@
           <!-- loop start -->
           <li class="work" data-<?=$work_cate?>=<?=$work_cate?>>
             <span class="over"> </span>
+            <p class="tag"><?=$work_desc?></p>
             <div class="work-subject">
               <span class="cata"> <?=$work_cate?> </span>
               <em><?=$work_num?></em>
@@ -227,7 +228,7 @@
 
           <!-- loop end -->
           <?php }?>
-
+          <li class="end-page"></li>
         </ul>
       </section>
     </div>

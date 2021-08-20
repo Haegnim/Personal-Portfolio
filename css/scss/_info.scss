@@ -22,7 +22,7 @@
     @include flex();
     .faceani {
       position: relative;
-      margin: 0 auto;
+      margin: 10px auto 0;
     }
     .face-hello {
       @include size($w: 200px, $h: 200px);
@@ -70,14 +70,14 @@
             font-size: 20px;
             padding: 0 2px;
             transition: all 0.3s ease-out;
-            color: #333;
+            color: $main-color;
             &:hover {
               color: $hover-color;
             }
           }
         }
         .contack {
-          padding: 10px 3px 10px 0;
+          padding: 10px 3px;
           padding-bottom: 10px;
           border-bottom: 1px solid $border-sub-light;
           span {
@@ -144,6 +144,7 @@
       border-bottom: 1px solid $border-sub-bold;
       @include size($w: 100%, $p: 0 0 3px, $m: 0 0 10px);
       display: block;
+      color: $sub-bold;
     }
     & > div {
       border-bottom: 1px solid #ddd;
@@ -151,7 +152,7 @@
     }
     em {
       font-size: 12px;
-      color: #777;
+      color: $sub-middle;
       margin-left: 8px;
     }
     ul {

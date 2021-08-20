@@ -6,23 +6,23 @@ $animation-workVeiw: 0.9;
 $animation-start: 2.2s;
 
 //text color
-$main-color: #2c599d;
+$main-color: #000;
 $sub-bold: #333;
 $sub-middle: #777;
 $sub-light: #ddd;
 
-$hover-color: #f98125;
+$hover-color: #ffa646;
 $back-color: #efefef;
 $con-color: #fff;
 $con-font-color: #fff;
 $btn-back-color: rgba(#000, 0.2);
 
-$button-color: $main-color;
+$button-color: #fff;
 $button-effect: #fff;
-$button-hover-color: #fff;
+$button-hover-color: $hover-color;
 
 //border-line color
-$border-main: $main-color;
+$border-main: $sub-middle;
 $border-sub-bold: $sub-bold;
 $border-sub-middle: $sub-middle;
 $border-sub-light: $sub-light;
@@ -133,6 +133,8 @@ $shadow: rgba(0, 0, 0, 0.2);
   background: rgba(0, 0, 0, 0.2);
   border-radius: 5px 0 0 0;
   padding: 5px 10px 10px;
+  backdrop-filter: blur(1px);
+
   transform: translateX(1000%);
   animation: right 1 3s;
   animation-fill-mode: forwards;
@@ -156,12 +158,13 @@ $shadow: rgba(0, 0, 0, 0.2);
     margin-right: 3px;
     transition: all 0.3s;
     font-size: 10px;
+
     &:hover {
       box-shadow: inset 0 0 3px $shadow;
     }
     &.active {
       color: $hover-color;
-      background: #fff;
+      background: rgba(#fff, 0.8);
     }
   }
 }

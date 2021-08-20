@@ -22,6 +22,7 @@
     &:hover span:nth-child(1) {
       width: 100%;
     }
+
     &.on {
       span {
         &:nth-child(1) {
@@ -50,10 +51,16 @@
     padding: 5px 20px;
     border-radius: 50%;
     margin-bottom: 70px;
+    cursor: pointer;
+    transition: all 0.3s;
     h3 {
       font-size: 14px;
     }
+    &:hover {
+      animation: rota90 0.4s 1;
+    }
   }
+
   .email {
     position: relative;
     transform: rotate(-90deg);
@@ -63,9 +70,10 @@
     a {
       transition: all 0.3s ease-out;
       color: $main-color;
-      &:hover {
-        color: $hover-color;
-      }
+      font-size: 12px;
+    }
+    &:hover {
+      animation: rota90 0.4s 1;
     }
   }
 }
@@ -92,7 +100,7 @@
         font-size: 70px;
         line-height: 1.8;
         color: $main-color;
-        transition: all 0.3s ease-out;
+        transition: all 0.1s ease-out;
         &:hover {
           color: $hover-color;
         }

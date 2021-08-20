@@ -51,6 +51,7 @@ function horawheel() {
     } else {
       offset = 0;
     }
+
     // console.log(offset);
     if (offset >= 120) {
       Info.style.opacity = 0;
@@ -115,7 +116,13 @@ headerAni();
 function logoclick() {
   // console.log(document.documentElement);
   // console.log(document.documentElement.scrollTop);
-  // window.scrollTo(0, 0);
+  const workList = document.querySelector(".work-list");
+  const Info = document.querySelector(".info");
+  const Home = document.querySelector(".home");
+  Home.scrollTo(0, 0);
+  window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  workList.style.transform = `translateX(0px)`;
+  Info.style.opacity = 1;
 }
 
 function hambergerClick() {
