@@ -85,7 +85,7 @@ $shadow: rgba(0, 0, 0, 0.2);
   p {
     font-size: 50px;
     line-height: 1.5;
-    font-weight: thin;
+    // font-weight: thin;
     opacity: 0;
     animation: up 1 1s;
     animation-timing-function: ease-in-out;
@@ -201,3 +201,20 @@ $shadow: rgba(0, 0, 0, 0.2);
   line-height: 1.5;
   color: $sub-middle;
 }
+
+// footer {
+//   @include size($w: 50px, $h: 100vh, $p: 120px 0);
+//   background: $hover-color;
+//   display: flex;
+//   justify-content: space-between;
+//   flex-direction: column;
+//   align-items: center;
+//   position: fixed;
+//   right: 0;
+//   transition: all 0.4s;
+//   > div {
+//     transform: rotate(90deg);
+//     width: 200px;
+//     font-size: 12px;
+//   }
+// }

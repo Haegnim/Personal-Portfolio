@@ -59,6 +59,9 @@
     &:hover {
       animation: rota90 0.4s 1;
     }
+    img {
+      display: none;
+    }
   }
 
   .email {
@@ -90,7 +93,7 @@
     margin-left: 72px;
   }
   ul {
-    @include size($w: 100%, $h: 100vh, $p: 0 0 100px, $m: 0 auto);
+    @include size($w: 100%, $h: 100vh, $m: 0 auto);
     @include flex($jc: center, $ai: null);
     flex-direction: column;
     max-width: 500px;

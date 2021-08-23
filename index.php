@@ -4,22 +4,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-  <title>my-p</title>
+  <meta name="viewport" content="width=device-width, initial-scale=0.1, user-scalable=no">
+  <title> Hyekyeuong | PORTFOLIO </title>
+
   <!-- font awesome link -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&family=Roboto:wght@100;300;400;500;700&display=swap"
-    rel="stylesheet" />
-  <link rel="apple-touch-icon" href="/zay/img/favicon.ico" />
+  <link rel=" stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <!-- font link -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Poiret+One&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&family=Roboto:wght@100;300;400;500;700&family=Poiret+One&display=swap"
     rel="stylesheet" />
+  <!-- favicon link -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/MY-P/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/MY-P/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/MY-P/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/MY-P/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/MY-P/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/MY-P/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/MY-P/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/MY-P/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/MY-P/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/MY-P/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/MY-P/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/MY-P/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/MY-P/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/MY-P/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/MY-P/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
   <!-- reset css link -->
   <link rel="stylesheet" href="/MY-P/css/reset.css" />
   <!-- animation css link -->
@@ -42,6 +55,7 @@
       </div>
       <div class="logo" onclick="logoclick()">
         <h3>hyekyeuong</h3>
+        <img src="/MY-P/favicon/apple-icon-57x57.png" alt="">
       </div>
       <div class="email">
         <a href="mailto:heagim@gmail.com">heagim@gmail.com</a>
@@ -49,13 +63,13 @@
     </header>
     <div class="hide-nav">
       <ul>
-        <li><a href="/MY-P/pages/about_me.html">ABOUT ME</a></li>
+        <li><a href="/MY-P/index.php">HOME</a></li>
+        <li><a href="https://pitch-booklet-498.notion.site/278b9419a19b45aea9541bf8f2c9f35d" target="_blank">ABOUT
+            ME</a></li>
         <li><a href="">work</a></li>
-        <ui class="in-ul">
-          <li><a href="">developer</a></li>
-          <li><a href="">designer</a></li>
-        </ui>
-        <li><a href="">resume</a></li>
+        <li class="in-ul"><a href="">developer</a></li>
+        <li class="in-ul"><a href="">designer</a></li>
+        <li><a href="/MY-P/pages/resume.pdf" target="_blank">resume</a></li>
       </ul>
     </div>
     <div class="home">
@@ -78,8 +92,8 @@
               <div class="about-tit">
                 <h4>Kim hyekyeuong</h4>
                 <span>
-                  <a href="https://github.com/Haegnim"><i class="fa fa-github"></i></a>
-                  <a href="https://www.instagram.com/haegnim/"><i class="fa fa-instagram"></i></a>
+                  <a href="https://github.com/Haegnim" target="_blank"><i class="fa fa-github"></i></a>
+                  <a href="https://www.instagram.com/haegnim/" target="_blank"><i class="fa fa-instagram"></i></a>
                   <!-- <i class="fa fa-twitter"></i> -->
                 </span>
               </div>
@@ -90,15 +104,16 @@
                 </span>
                 <span>
                   <p>chat</p>
-                  <a href="https://open.kakao.com/o/spSor7ud">오픈카카오톡</a>
+                  <a href="https://open.kakao.com/o/spSor7ud" target="_blank">오픈카카오톡</a>
                 </span>
               </div>
               <div class="golink">
-                <a href="/MY-P/pages/about_me.html" class="aboutlink">
+                <a href="https://pitch-booklet-498.notion.site/278b9419a19b45aea9541bf8f2c9f35d" target="_blank"
+                  class="aboutlink">
                   About me
                   <i class="fa fa-caret-right"></i>
                 </a>
-                <a href="/MY-P/pages/resume.pdf" class="aboutlink">
+                <a href="/MY-P/pages/resume.pdf" target="_blank" class="aboutlink">
                   resume
                   <i class="fa fa-caret-right"></i>
                 </a>
@@ -218,9 +233,9 @@
                 <?=$work_skill?>
               </ul>
               <div class="work-link">
-                <a href="<?=$work_moreview?>"> more view </a>
-                <a href="<?=$work_git?>" class="gitbtn"> git </a>
-                <a href="<?=$work_link?>"> link </a>
+                <a href="<?=$work_moreview?>" target="_blank"> more view </a>
+                <a href="<?=$work_git?>" class="gitbtn" target="_blank"> git </a>
+                <a href="<?=$work_link?>" target="_blank"> link </a>
               </div>
             </div>
             <img src="/MY-P/img/popo/<?=$work_img?>" alt="" />
@@ -228,15 +243,22 @@
 
           <!-- loop end -->
           <?php }?>
-          <li class="end-page"></li>
+          <li class="end-page">
+            <p>여기까지 마지막작업입니다 <br>좋게 봐주셨다면 감사합니다</p>
+            <button type="button" onclick="logoclick()">back home</button>
+          </li>
         </ul>
       </section>
     </div>
-    <footer></footer>
+    <!-- <footer>
+      <div class=" copyright">© 2021 hyekyeuong
+      </div>
+      <div class="made-by">made by hyekyeuong</div>
+    </footer> -->
     <div class="intro">
-      <p>안녕하세요</p>
-      <p>다재다능한 디발자, 김혜경입니다.</p>
-      <p>다재다능한 디발자, 김혜경입니다.</p>
+      <p>안녕하세요 </p>
+      <p>호기심 많고 다재다능한 디발자</p>
+      <p>김혜경 입니다</p>
     </div>
   </div>
   <script src="/MY-P/js/main.js"></script>

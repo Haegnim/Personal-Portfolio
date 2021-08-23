@@ -1,30 +1,30 @@
 function resize() {
   // console.log("resize");
   window.addEventListener("resize", function () {
-    if (window.innerWidth > 768) {
-      // console.log("!resize");
-      horawheel();
-    } else {
-      const workList = document.querySelector(".work-list");
-      workList.style.width = "100%";
-      workList.style.transform = `0px`;
-      // console.log("!resize");
-    }
+    const workList = document.querySelector(".work-list");
+    const Info = document.querySelector(".info");
+
+    const Home = document.querySelector(".home");
+    Home.scrollTo(0, 0);
+    workList.style.transform = `translateX(0px)`;
+    Info.style.opacity = 1;
+
+    console.log("resize");
   });
 
   // window.removeEventListener("resize", function () {
   //   horawheel();
   //   workList.style.width = "100%";
   //   workList.style.transform = `0px`;
-  // console.log("resize");
   // });
 }
-// resize();
+resize();
 
 function horawheel() {
   const workList = document.querySelector(".work-list");
   const Home = document.querySelector(".home");
   const work = document.querySelectorAll(".work-list li");
+  const back = document.querySelectorAll(".end-page");
   const workVeiw = document.querySelector(".work-veiw");
   const Info = document.querySelector(".info");
   const downani = document.querySelector(".scrollani");
@@ -80,6 +80,10 @@ function horawheel() {
       workList.style.transform = `translateX(-${offset}px`;
       Home.scrollTo(0, 0);
     }
+
+    // if (offset <= workList.offsetWidth - back.offsetWidth) {
+    //   console.log("back");
+    // }
   });
 }
 
@@ -279,11 +283,13 @@ function anistart() {
   const Info = document.querySelector(".info");
   const faceHello = document.querySelector(".face-hello");
 
-  Info.addEventListener("mousemove", function () {
+  Info.addEventListener("mouseover", function () {
     faceHello.classList.add("on");
+  });
+  Info.addEventListener("mouseout", function () {
     setTimeout(function () {
       faceHello.classList.remove("on");
-    }, 15000);
+    }, 10000);
   });
 }
 anistart();

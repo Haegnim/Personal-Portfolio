@@ -4,10 +4,10 @@
   transition: all 0.4s;
   position: relative;
   background: $back-color;
-  transform: translateX(1000%);
   animation: right 1 3s;
   animation-fill-mode: forwards;
   animation-delay: $animation-workVeiw + s;
+  transform: translateX(1000%);
   &.start {
     animation-timing-function: $animation;
     animation-delay: $animation-workVeiw + $animation-start;
@@ -42,7 +42,7 @@
       }
     }
     .over {
-      @include size($w: 110%, $h: 110%);
+      @include size($w: 100%, $h: 100%);
       position: absolute;
       top: 0px;
       left: 0px;
@@ -166,7 +166,57 @@
     }
   }
   .end-page {
-    width: 800px;
+    width: 850px;
     height: auto;
+    margin: auto;
+    padding: 0 200px;
+    font-size: 24px;
+    text-align: center;
+    line-height: 1.7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p {
+      color: #777;
+    }
+    button {
+      @include size($w: 200px, $p: 20px, $m: 35px 0 10px);
+      font-size: 14px;
+      text-shadow: none;
+      display: block;
+      background: $btn-back-color;
+      color: $button-color;
+      // height: 50%;
+      text-align: center;
+      border-radius: 5px;
+      border: 1px solid #fff;
+      // box-shadow: inset 1px 1px 3px rgba(#000, 0.2);
+      line-height: 0.8;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+      transition: all 0.8s;
+      backdrop-filter: blur(3px);
+      text-shadow: 0 0 2px rgba(#000, 0.2);
+      &::after {
+        @include size($w: 15%, $h: 100%);
+        transition: all 0.8s;
+        content: "";
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: -50px;
+        background: $button-effect;
+        transform: skewX(-20deg);
+        opacity: 0;
+      }
+      &:hover {
+        border: 1px solid $hover-color;
+      }
+      &:hover::after {
+        left: 250px;
+        opacity: 1;
+      }
+    }
   }
 }

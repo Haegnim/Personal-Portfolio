@@ -41,7 +41,6 @@
 .intro p {
   font-size: 50px;
   line-height: 1.5;
-  font-weight: thin;
   opacity: 0;
   -webkit-animation: up 1 1s;
           animation: up 1 1s;
@@ -133,6 +132,9 @@
   -webkit-animation: rota90 0.4s 1;
           animation: rota90 0.4s 1;
 }
+.header .logo img {
+  display: none;
+}
 .header .email {
   position: relative;
   transform: rotate(-90deg);
@@ -166,7 +168,6 @@
 .hide-nav ul {
   width: 100%;
   height: 100vh;
-  padding: 0 0 100px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -420,13 +421,13 @@
   transition: all 0.4s;
   position: relative;
   background: #efefef;
-  transform: translateX(1000%);
   -webkit-animation: right 1 3s;
           animation: right 1 3s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   -webkit-animation-delay: 0.9s;
           animation-delay: 0.9s;
+  transform: translateX(1000%);
 }
 .work-veiw.start {
   -webkit-animation-timing-function: ease-in;
@@ -467,8 +468,8 @@
   border-radius: 20px 20px 0 0;
 }
 .work-list .work .over {
-  width: 110%;
-  height: 110%;
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -605,8 +606,60 @@
   transition: all 0.4s;
 }
 .work-list .end-page {
-  width: 800px;
+  width: 850px;
   height: auto;
+  margin: auto;
+  padding: 0 200px;
+  font-size: 24px;
+  text-align: center;
+  line-height: 1.7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.work-list .end-page p {
+  color: #777;
+}
+.work-list .end-page button {
+  width: 200px;
+  padding: 20px;
+  margin: 35px 0 10px;
+  font-size: 14px;
+  text-shadow: none;
+  display: block;
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  line-height: 0.8;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  transition: all 0.8s;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+.work-list .end-page button::after {
+  width: 15%;
+  height: 100%;
+  transition: all 0.8s;
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: -50px;
+  background: #fff;
+  transform: skewX(-20deg);
+  opacity: 0;
+}
+.work-list .end-page button:hover {
+  border: 1px solid #ffa646;
+}
+.work-list .end-page button:hover::after {
+  left: 250px;
+  opacity: 1;
 }
 
 .remove {
