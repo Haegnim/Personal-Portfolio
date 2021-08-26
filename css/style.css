@@ -253,6 +253,7 @@
   border-radius: 50%;
   overflow: hidden;
   background: #000;
+  isolation: isolate;
 }
 .info .introduction .face img {
   width: 100%;

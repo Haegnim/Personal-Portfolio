@@ -1,5 +1,5 @@
+//리사이즈 > 스크롤과 이미지 위치 초기화
 function resize() {
-  // console.log("resize");
   window.addEventListener("resize", function () {
     const workList = document.querySelector(".work-list");
     const Info = document.querySelector(".info");
@@ -8,56 +8,36 @@ function resize() {
     Home.scrollTo(0, 0);
     workList.style.transform = `translateX(0px)`;
     Info.style.opacity = 1;
-
-    console.log("resize");
   });
-
-  // window.removeEventListener("resize", function () {
-  //   horawheel();
-  //   workList.style.width = "100%";
-  //   workList.style.transform = `0px`;
-  // });
 }
 resize();
 
+//메인페이지 스크롤 이벤트
 function horawheel() {
   const workList = document.querySelector(".work-list");
   const Home = document.querySelector(".home");
   const work = document.querySelectorAll(".work-list li");
-  const back = document.querySelectorAll(".end-page");
   const workVeiw = document.querySelector(".work-veiw");
   const Info = document.querySelector(".info");
   const downani = document.querySelector(".scrollani");
 
-  // let scrollX = 1;
-  // const workVeiwX = workVeiw.offsetWidth;
-  const workX = work[0].offsetWidth;
-  const HomeX = Home.offsetWidth;
-  const InfoX = Info.offsetWidth;
-  // console.log(workVeiwX);
-
   let offset = 0;
-  window.addEventListener("wheel", e => {
-    // console.log(e);
+  window.addEventListener("wheel", (e) => {
     if (window.innerWidth > 768) {
       if (Math.abs(e.deltaY) < 120) {
-        // console.log("delay");
         e.deltaX = 0;
         offset += Math.sign(e.deltaY) * 10;
       } else {
         offset += Math.sign(e.deltaY) * 150;
-        // console.log("delay");
       }
     } else {
       offset = 0;
     }
 
-    // console.log(offset);
     if (offset >= 120) {
       Info.style.opacity = 0;
       Home.style.background = "#efefef";
       workVeiw.style.background = "none";
-      // console.log("wheel down");
     } else {
       Info.style.opacity = 1;
       Home.style.background = "#efefef";
@@ -80,25 +60,12 @@ function horawheel() {
       workList.style.transform = `translateX(-${offset}px`;
       Home.scrollTo(0, 0);
     }
-
-    // if (offset <= workList.offsetWidth - back.offsetWidth) {
-    //   console.log("back");
-    // }
   });
 }
 
 horawheel();
 
-// function mobilescroll() {
-//   const workList = document.querySelector(".work-list");
-
-//   if (window.innerWidth <= 768) {
-//     workList.style.width = "100%";
-//     workList.style.transform = `0px`;
-//   }
-// }
-// mobilescroll();
-
+//헤더 스티키 애니메이션
 function headerAni() {
   const header = document.querySelector("header");
   // console.log(header);
@@ -117,6 +84,7 @@ function headerAni() {
 }
 headerAni();
 
+//로고 클릭 시 스크롤 0으로 이동
 function logoclick() {
   // console.log(document.documentElement);
   // console.log(document.documentElement.scrollTop);
@@ -129,6 +97,7 @@ function logoclick() {
   Info.style.opacity = 1;
 }
 
+//햄버거 아이콘 애니메이션
 function hambergerClick() {
   const hamberger = document.querySelector(".hamberger");
   const tabnav = document.querySelector(".hide-nav");
@@ -140,6 +109,7 @@ function hambergerClick() {
 }
 hambergerClick();
 
+//인트로 커버 삭제
 function introOut() {
   const intro = document.querySelector(".intro");
   // console.log(intro);
@@ -150,6 +120,7 @@ function introOut() {
 }
 introOut();
 
+//쿠키
 function setCookie(cname, cvalue, min) {
   const exdate = new Date();
   exdate.setMinutes(exdate.getMinutes() + min);
@@ -200,6 +171,7 @@ function checkCookie() {
 }
 checkCookie();
 
+//작업 분류
 function cateTab() {
   const cateTabs = document.querySelectorAll(".btnbox button");
   const all = document.querySelector(".btn-all");
@@ -218,45 +190,45 @@ function cateTab() {
   design.addEventListener("click", showdesign);
 
   function showAll() {
-    filterArr.forEach(div => {
+    filterArr.forEach((div) => {
       div.classList.remove("remove");
     });
-    tabsArr.forEach(a => {
+    tabsArr.forEach((a) => {
       a.classList.remove("active");
     });
     all.classList.add("active");
   }
 
   function showdevelop() {
-    filterArr.forEach(div => {
+    filterArr.forEach((div) => {
       div.classList.remove("remove");
 
       if (!div.dataset.develop) {
         div.classList.add("remove");
       }
     });
-    tabsArr.forEach(a => {
+    tabsArr.forEach((a) => {
       a.classList.remove("active");
     });
     develop.classList.add("active");
   }
 
   function showdesign() {
-    filterArr.forEach(div => {
+    filterArr.forEach((div) => {
       div.classList.remove("remove");
 
       if (!div.dataset.design) {
         div.classList.add("remove");
       }
     });
-    tabsArr.forEach(a => {
+    tabsArr.forEach((a) => {
       a.classList.remove("active");
     });
     design.classList.add("active");
   }
   function gitremove() {
     // const gitbtn = document.querySelector(".gitbtn");
-    filterArr.forEach(div => {
+    filterArr.forEach((div) => {
       if (div.dataset.design) {
         // console.log(div.querySelector(".gitbtn"));
         div.querySelector(".gitbtn").style.display = "none";
@@ -267,6 +239,7 @@ function cateTab() {
 }
 cateTab();
 
+//스크롤 이벤트시 투명화
 function scrolldownani() {
   const downani = document.querySelector(".scrollani");
   window.addEventListener("wheel", function () {
@@ -279,6 +252,7 @@ function scrolldownani() {
 }
 scrolldownani();
 
+//info 마우스 호버시 인삿말 등장
 function anistart() {
   const Info = document.querySelector(".info");
   const faceHello = document.querySelector(".face-hello");

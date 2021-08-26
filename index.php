@@ -256,9 +256,15 @@
       <div class="made-by">made by hyekyeuong</div>
     </footer> -->
     <div class="intro">
-      <p>안녕하세요 </p>
-      <p>호기심 많고 다재다능한 디발자</p>
-      <p>김혜경 입니다</p>
+      <div class="mask">
+        <p>안녕하세요</p>
+      </div>
+      <div class="mask">
+        <p>호기심 많고 다재다능한 디발자</p>
+      </div>
+      <div class="mask">
+        <p>김혜경 입니다</p>
+      </div>
     </div>
   </div>
   <script src="/MY-P/js/main.js"></script>
