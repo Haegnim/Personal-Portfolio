@@ -22,7 +22,7 @@
     @include flex();
     .faceani {
       position: relative;
-      margin: 10px auto 0;
+      margin: 10px 10px 0 0;
     }
     .face-hello {
       @include size($w: 200px, $h: 200px);

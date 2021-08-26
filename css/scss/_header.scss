@@ -1,3 +1,39 @@
+.wrap-work .header {
+  @include size($w: 100%, $h: 60px, $p: 0 20px);
+  transform: translateX(0);
+  flex-direction: row;
+  animation: none;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+  &.sticky {
+    position: fixed;
+    height: 45px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  &:hover {
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+  }
+  .hamberger {
+    padding-top: 10px;
+  }
+  .logo {
+    transform: rotate(0) translateX(55px);
+    margin: 0;
+    &:hover {
+      animation: none;
+    }
+  }
+  .email {
+    transform: rotate(0);
+    position: static;
+  }
+}
+.wrap-work {
+  .hide-nav ul {
+    height: auto;
+    padding-top: 40px;
+  }
+}
 .header {
   @include size($w: 60px, $h: 100vh, $p: 20px 0);
   @include flex();
@@ -90,7 +126,7 @@
     display: block;
   }
   .in-ul {
-    margin-left: 72px;
+    margin-left: 142px;
   }
   ul {
     @include size($w: 100%, $h: 100vh, $m: 0 auto);

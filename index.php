@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=0.1, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title> Hyekyeuong | PORTFOLIO </title>
 
   <!-- font awesome link -->
@@ -41,6 +41,9 @@
   <link rel="stylesheet" href="/MY-P/css/style.css" />
   <!-- media css link -->
   <link rel="stylesheet" href="/MY-P/css/media.css" />
+  <!-- main js link -->
+  <script defer src="/MY-P/js/main.js"></script>
+
 </head>
 
 <body>
@@ -66,9 +69,9 @@
         <li><a href="/MY-P/index.php">HOME</a></li>
         <li><a href="https://pitch-booklet-498.notion.site/278b9419a19b45aea9541bf8f2c9f35d" target="_blank">ABOUT
             ME</a></li>
-        <li><a href="">work</a></li>
-        <li class="in-ul"><a href="">developer</a></li>
-        <li class="in-ul"><a href="">designer</a></li>
+        <li><a href="/MY-P/pages/work.php?cate=all">work</a></li>
+        <li class="in-ul"><a href="/MY-P/pages/work.php?cate=develop">code</a></li>
+        <li class="in-ul"><a href="/MY-P/pages/work.php?cate=design">Visual</a></li>
         <li><a href="/MY-P/pages/resume.pdf" target="_blank">resume</a></li>
       </ul>
     </div>
@@ -201,7 +204,7 @@
           <?php
         include $_SERVER['DOCUMENT_ROOT']."/connect/db_conn.php";
           // echo $tain;
-            $sql = "SELECT * FROM popo_work ORDER BY work_idx ASC";
+            $sql = "SELECT * FROM popo_work WHERE work_level=1 ORDER BY work_idx ASC";
             $work_result = mysqli_query($dbConn, $sql);
             $work_num_result = mysqli_num_rows($work_result);
 
@@ -238,23 +241,19 @@
                 <a href="<?=$work_link?>" target="_blank"> link </a>
               </div>
             </div>
-            <img src="/MY-P/img/popo/<?=$work_img?>" alt="" />
+            <img data-src="/MY-P/img/popo/<?=$work_img?>" alt="" />
           </li>
 
           <!-- loop end -->
           <?php }?>
           <li class="end-page">
-            <p>여기까지 마지막작업입니다 <br>좋게 봐주셨다면 감사합니다</p>
+            <p>여기까지 마지막 프로젝트입니다 <br>좋게 봐주셨다면 감사합니다</p>
             <button type="button" onclick="logoclick()">back home</button>
           </li>
         </ul>
       </section>
     </div>
-    <!-- <footer>
-      <div class=" copyright">© 2021 hyekyeuong
-      </div>
-      <div class="made-by">made by hyekyeuong</div>
-    </footer> -->
+
     <div class="intro">
       <div class="mask">
         <p>안녕하세요</p>
@@ -267,7 +266,19 @@
       </div>
     </div>
   </div>
-  <script src="/MY-P/js/main.js"></script>
+  </script>
+  <script type="text/javascript">
+  //이미지지로로드 지지연연
+  function imgDefer() {
+    const img = document.getElementsByTagName("img");
+    for (var i = 0; i < img.length; i++) {
+      if (img[i].getAttribute("data-src")) {
+        img[i].setAttribute("src", img[i].getAttribute("data-src"));
+      }
+    }
+  }
+  window.onload = imgDefer;
+  </script>
 </body>
 
 </html>

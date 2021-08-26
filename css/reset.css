@@ -1,3 +1,5 @@
+/* setting reset Layout Style */
+
 * {
   margin: 0;
   padding: 0;
@@ -15,6 +17,8 @@ ul {
 @font-face {
   font-family: "Neutral Face";
   src: url("/MY-P/font/NeutralFace.otf") format("opentype");
+  font-display: swap;
+
 }
 
 input,
@@ -24,8 +28,6 @@ textarea {
   border-radius: 0;
   border: 0;
   color: #777;
-  /* font-family: "Nanum Myeongjo", serif;
-  font-family: "Noto Sans KR", sans-serif; */
   font-family: Neutral Face, "Roboto", "Noto Sans KR", sans-serif;
 
   font-size: 14px;
@@ -43,7 +45,6 @@ em {
 b {
   font-weight: normal;
 }
-/* setting reset Layout Style */
 .center {
   width: 100%;
   margin: auto;
@@ -51,19 +52,15 @@ b {
   height: auto;
 }
 
-.wrap {
+/* .wrap {
   width: 100%;
   height: auto;
   overflow: hidden;
-}
+} */
 
 body {
   font-size: 14px;
-  /* font-family: "Cormorant Garamond", serif; */
   font-family: Neutral Face, "Roboto", "Noto Sans KR", sans-serif;
   letter-spacing: 1px;
-
-  /* 
-  font-family: "Nanum Myeongjo", serif;
-  font-family: "Noto Sans KR", sans-serif; */
+  overflow: hidden;
 }
