@@ -1,4 +1,4 @@
-# Portfolio <img src="img/poposns.jpg" width="38" align="right"/>
+# Portfolio <img src="poposns.jpg" width="38" align="right"/>
 
 _개인 포트폴리오 사이트_
 
