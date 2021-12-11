@@ -592,11 +592,7 @@
   line-height: 1.7;
 }
 .work-list .work .work-link {
-  position: absolute;
-  bottom: 60px;
-  right: 50px;
-  display: flex;
-  flex-direction: column;
+  margin: auto 0px 0px auto;
 }
 .work-list .work .work-link a {
   width: 200px;

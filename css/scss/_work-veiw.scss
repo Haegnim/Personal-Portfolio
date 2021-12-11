@@ -114,11 +114,12 @@
       }
     }
     .work-link {
-      position: absolute;
-      bottom: 60px;
-      right: 50px;
-      display: flex;
-      flex-direction: column;
+      // position: absolute;
+      // bottom: 60px;
+      // right: 50px;
+      // display: flex;
+      // flex-direction: column;
+      margin: auto 0px 0px auto;
       a {
         @include size($w: 200px, $p: 20px, $m: 0 0 10px);
         font-size: 14px;

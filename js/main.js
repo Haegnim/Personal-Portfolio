@@ -8,6 +8,8 @@ function resize() {
     Home.scrollTo(0, 0);
     workList.style.transform = `translateX(0px)`;
     Info.style.opacity = 1;
+
+    evenWorkH();
   });
 }
 resize();
@@ -267,3 +269,19 @@ function anistart() {
   });
 }
 anistart();
+
+function evenWorkH() {
+  const workCardList = document.querySelectorAll(".work-subject");
+  // console.log(workCardList[1]);
+  const cardH = workCardList[0].offsetHeight;
+  // console.log(cardH);
+
+  for (let i = 0; i < workCardList.length; i++) {
+    if (i % 2 !== 0) {
+      workCardList[i].style.height = cardH + "px";
+      // console.log("even");
+    } else {
+    }
+  }
+}
+evenWorkH();
