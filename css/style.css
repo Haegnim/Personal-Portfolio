@@ -113,23 +113,10 @@
   box-shadow: 3px 0px 6px rgba(0, 0, 0, 0.1);
   z-index: 999;
   background: #fff;
-  transform: translateX(5000px);
-  -webkit-animation: right 1 3s;
-          animation: right 1 3s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
   color: #000;
 }
 .header.sticky {
   position: fixed;
-}
-.header.start {
-  -webkit-animation-timing-function: ease-in;
-          animation-timing-function: ease-in;
-  -webkit-animation-delay: 2.6s;
-          animation-delay: 2.6s;
 }
 .header .hamberger {
   width: 30px;
@@ -246,19 +233,6 @@
   position: relative;
   transition: all 0.4s;
   color: #000;
-  transform: translateX(1000%);
-  -webkit-animation: right 1 3s;
-          animation: right 1 3s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
-}
-.info.start {
-  -webkit-animation-timing-function: ease-in;
-          animation-timing-function: ease-in;
-  -webkit-animation-delay: 2.8s;
-          animation-delay: 2.8s;
 }
 .info > div {
   margin-bottom: 20px;
@@ -462,19 +436,6 @@
   transition: all 0.4s;
   position: relative;
   background: #efefef;
-  -webkit-animation: right 1 3s;
-          animation: right 1 3s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-delay: 0.9s;
-          animation-delay: 0.9s;
-  transform: translateX(1000%);
-}
-.work-veiw.start {
-  -webkit-animation-timing-function: ease-in;
-          animation-timing-function: ease-in;
-  -webkit-animation-delay: 3.1s;
-          animation-delay: 3.1s;
 }
 
 .work-list {
@@ -713,19 +674,6 @@
   padding: 5px 10px 10px;
   -webkit-backdrop-filter: blur(1px);
           backdrop-filter: blur(1px);
-  transform: translateX(1000%);
-  -webkit-animation: right 1 3s;
-          animation: right 1 3s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-delay: 0.9s;
-          animation-delay: 0.9s;
-}
-.btnbox.start {
-  -webkit-animation-timing-function: ease-in;
-          animation-timing-function: ease-in;
-  -webkit-animation-delay: 3.1s;
-          animation-delay: 3.1s;
 }
 .btnbox p {
   text-align: center;

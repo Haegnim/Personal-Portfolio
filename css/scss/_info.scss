@@ -1,182 +1,181 @@
 .info {
-  @include size($w: 30%, $h: auto, $p: 60px 60px);
-  background: $con-color;
-  // border-right: 1px solid #ddd;
-  position: relative;
-  transition: all 0.4s;
-  color: $main-color;
-  // box-shadow: 3px 0px 6px $shadow;
-  transform: translateX(1000%);
-  animation: right 1 3s;
-  animation-fill-mode: forwards;
-  animation-delay: $animation-info + s;
-  &.start {
-    animation-timing-function: $animation;
-    animation-delay: $animation-info + $animation-start;
-  }
-
-  & > div {
-    margin-bottom: 20px;
-  }
-  .introduction {
-    @include flex();
-    .faceani {
-      position: relative;
-      margin: 10px 10px 0 0;
-    }
-    .face-hello {
-      @include size($w: 200px, $h: 200px);
-      position: absolute;
-      background: url(/MY-P/img/messeg.svg) no-repeat center center;
-      left: -15px;
-      top: -15px;
-      opacity: 0;
-      transition: all 0.3s;
-      &.on {
-        animation: face-hello 6s 1;
-      }
-    }
-    .face {
-      @include size($w: 170px, $h: 170px, $p: 0 10px);
-      border-radius: 50%;
-      overflow: hidden;
-      background: #000;
-      isolation: isolate;
-      img {
-        @include img();
-        border-radius: 50%;
-      }
-      video {
-        @include img();
-        border-radius: 50%;
-        transform: translate(6px, 7px);
-        position: relative;
-      }
-    }
-    .hello {
-      @include size($w: 60%, $p: 30px 0px 30px 20px);
-      @include flex($ai: null);
-      flex-direction: column;
-      .aboutme {
-        @include flex($ai: null);
-        flex-direction: column;
-        .about-tit {
-          padding: 10px 3px 3px 0;
-          @include flex();
-          border-bottom: 1px solid $border-main;
-          h4 {
-            font-size: 14px;
-          }
-          i {
-            font-size: 20px;
-            padding: 0 2px;
-            transition: all 0.3s ease-out;
-            color: $main-color;
-            &:hover {
-              color: $hover-color;
-            }
-          }
-        }
-        .contack {
-          padding: 10px 3px;
-          padding-bottom: 10px;
-          border-bottom: 1px solid $border-sub-light;
-          span {
-            @include flex();
-            font-size: 12px;
-            line-height: 1.5;
-            padding: 3px 0;
-            color: $sub-middle;
-            a {
-              color: $sub-middle;
-            }
-          }
-        }
-        .golink {
-          padding: 10px 3px;
-          border-bottom: 1px solid $border-sub-light;
-          a {
-            color: $sub-middle;
-          }
-          .aboutlink {
-            @include size($w: 100%, $p: 3px 0);
-            @include flex();
-            position: relative;
-            font-size: 12px;
-            transition: all 0.3s ease-out;
-            font-size: 12px;
-            &:hover {
-              color: $hover-color;
-              &::before {
-                width: 55%;
-              }
-            }
-            &::before {
-              @include size($w: 0%, $h: 1px);
-              transition: all 0.3s;
-              content: "";
-              position: absolute;
-              background: #ddd;
-              left: 35%;
-              bottom: 50%;
-            }
-            i {
-              color: $sub-middle;
-              font-size: 24px;
-            }
-          }
-        }
-      }
-    }
-  }
-  .imymemine {
-    font-size: 19px;
-    padding-bottom: 60px;
-    // line-height: 1.8;
-    li {
-      border-bottom: 1px solid $border-sub-light;
-      padding: 15px 0 5px;
-    }
-  }
-  .skill {
-    font-size: 14px;
-    // line-height: 1.8;
-    b {
-      border-bottom: 1px solid $border-sub-bold;
-      @include size($w: 100%, $p: 0 0 3px, $m: 0 0 10px);
-      display: block;
-      color: $sub-bold;
-    }
+    @include size($w: 30%, $h: auto, $p: 60px 60px);
+    background: $con-color;
+    // border-right: 1px solid #ddd;
+    position: relative;
+    transition: all 0.4s;
+    color: $main-color;
+    // box-shadow: 3px 0px 6px $shadow;
+    // transform: translateX(1000%);
+    // animation: right 1 3s;
+    // animation-fill-mode: forwards;
+    // animation-delay: $animation-info + s;
+    // &.start {
+    //   animation-timing-function: $animation;
+    //   animation-delay: $animation-info + $animation-start;
+    // }
     & > div {
-      border-bottom: 1px solid #ddd;
-      @include size($p: 20px 0 15px, $m: 0 0 10px);
+        margin-bottom: 20px;
     }
-    em {
-      font-size: 12px;
-      color: $sub-middle;
-      margin-left: 8px;
+    .introduction {
+        @include flex();
+        .faceani {
+            position: relative;
+            margin: 10px 10px 0 0;
+        }
+        .face-hello {
+            @include size($w: 200px, $h: 200px);
+            position: absolute;
+            background: url(/MY-P/img/messeg.svg) no-repeat center center;
+            left: -15px;
+            top: -15px;
+            opacity: 0;
+            transition: all 0.3s;
+            &.on {
+                animation: face-hello 6s 1;
+            }
+        }
+        .face {
+            @include size($w: 170px, $h: 170px, $p: 0 10px);
+            border-radius: 50%;
+            overflow: hidden;
+            background: #000;
+            isolation: isolate;
+            img {
+                @include img();
+                border-radius: 50%;
+            }
+            video {
+                @include img();
+                border-radius: 50%;
+                transform: translate(6px, 7px);
+                position: relative;
+            }
+        }
+        .hello {
+            @include size($w: 60%, $p: 30px 0px 30px 20px);
+            @include flex($ai: null);
+            flex-direction: column;
+            .aboutme {
+                @include flex($ai: null);
+                flex-direction: column;
+                .about-tit {
+                    padding: 10px 3px 3px 0;
+                    @include flex();
+                    border-bottom: 1px solid $border-main;
+                    h4 {
+                        font-size: 14px;
+                    }
+                    i {
+                        font-size: 20px;
+                        padding: 0 2px;
+                        transition: all 0.3s ease-out;
+                        color: $main-color;
+                        &:hover {
+                            color: $hover-color;
+                        }
+                    }
+                }
+                .contack {
+                    padding: 10px 3px;
+                    padding-bottom: 10px;
+                    border-bottom: 1px solid $border-sub-light;
+                    span {
+                        @include flex();
+                        font-size: 12px;
+                        line-height: 1.5;
+                        padding: 3px 0;
+                        color: $sub-middle;
+                        a {
+                            color: $sub-middle;
+                        }
+                    }
+                }
+                .golink {
+                    padding: 10px 3px;
+                    border-bottom: 1px solid $border-sub-light;
+                    a {
+                        color: $sub-middle;
+                    }
+                    .aboutlink {
+                        @include size($w: 100%, $p: 3px 0);
+                        @include flex();
+                        position: relative;
+                        font-size: 12px;
+                        transition: all 0.3s ease-out;
+                        font-size: 12px;
+                        &:hover {
+                            color: $hover-color;
+                            &::before {
+                                width: 55%;
+                            }
+                        }
+                        &::before {
+                            @include size($w: 0%, $h: 1px);
+                            transition: all 0.3s;
+                            content: '';
+                            position: absolute;
+                            background: #ddd;
+                            left: 35%;
+                            bottom: 50%;
+                        }
+                        i {
+                            color: $sub-middle;
+                            font-size: 24px;
+                        }
+                    }
+                }
+            }
+        }
     }
-    ul {
-      @include flex($jc: flex-start, $ai: null);
-      flex-wrap: wrap;
-      padding: 5px 0;
-      li {
-        @include size($w: 60px, $p: 10px, $m: 5px);
-        border: 1px solid $back-color;
-        border-radius: 20px;
-        transition: all 0.4s;
-        background: $back-color;
-        &:hover {
-          border: 1px solid $hover-color;
+    .imymemine {
+        font-size: 19px;
+        padding-bottom: 60px;
+        // line-height: 1.8;
+        li {
+            border-bottom: 1px solid $border-sub-light;
+            padding: 15px 0 5px;
         }
-        img {
-          @include img($fit: contain);
-        }
-        p {
-          font-size: 10px;
-          text-align: center;
-        }
-      }
     }
-  }
+    .skill {
+        font-size: 14px;
+        // line-height: 1.8;
+        b {
+            border-bottom: 1px solid $border-sub-bold;
+            @include size($w: 100%, $p: 0 0 3px, $m: 0 0 10px);
+            display: block;
+            color: $sub-bold;
+        }
+        & > div {
+            border-bottom: 1px solid #ddd;
+            @include size($p: 20px 0 15px, $m: 0 0 10px);
+        }
+        em {
+            font-size: 12px;
+            color: $sub-middle;
+            margin-left: 8px;
+        }
+        ul {
+            @include flex($jc: flex-start, $ai: null);
+            flex-wrap: wrap;
+            padding: 5px 0;
+            li {
+                @include size($w: 60px, $p: 10px, $m: 5px);
+                border: 1px solid $back-color;
+                border-radius: 20px;
+                transition: all 0.4s;
+                background: $back-color;
+                &:hover {
+                    border: 1px solid $hover-color;
+                }
+                img {
+                    @include img($fit: contain);
+                }
+                p {
+                    font-size: 10px;
+                    text-align: center;
+                }
+            }
+        }
+    }
 }

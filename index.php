@@ -188,7 +188,7 @@
       </section>
 
       <div class="btnbox">
-        <p>chess cate</p>
+        <p>category</p>
         <button type="button" class="btn-all active">ALL</button>
         <button type="button" class="btn-develop">Develop</button>
         <button type="button" class="btn-design">Design</button>
@@ -254,7 +254,7 @@
       </section>
     </div>
 
-    <div class="intro">
+    <!-- <div class="intro">
       <div class="mask">
         <p>안녕하세요</p>
       </div>
@@ -264,7 +264,7 @@
       <div class="mask">
         <p>김혜경 입니다</p>
       </div>
-    </div>
+    </div> -->
   </div>
   </script>
   <script type="text/javascript">
