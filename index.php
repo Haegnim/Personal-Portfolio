@@ -204,7 +204,7 @@
           <?php
         include $_SERVER['DOCUMENT_ROOT']."/connect/db_conn.php";
           // echo $tain;
-            $sql = "SELECT * FROM popo_work WHERE work_level=1 ORDER BY work_idx ASC";
+            $sql = "SELECT * FROM popo_work WHERE work_level=1 ORDER BY work_idx ASC Limit 5";
             $work_result = mysqli_query($dbConn, $sql);
             $work_num_result = mysqli_num_rows($work_result);
 
@@ -247,8 +247,9 @@
           <!-- loop end -->
           <?php }?>
           <li class="end-page">
-            <p>여기까지 마지막 프로젝트입니다 <br>좋게 봐주셨다면 감사합니다</p>
-            <button type="button" onclick="logoclick()">back home</button>
+            <p>좋게 봐주셨다면 감사합니다<br>더 많은 작업을 보고 싶다면</p>
+            <a href="/MY-P/pages/work.php?cate=all" class="more-work-bt">Click Here!</a>
+            <button type="button"></button>
           </li>
         </ul>
       </section>

@@ -618,7 +618,7 @@
 .work-list .end-page p {
   color: #777;
 }
-.work-list .end-page button {
+.work-list .end-page .more-work-bt {
   width: 200px;
   padding: 20px;
   margin: 35px 0 10px;
@@ -639,7 +639,7 @@
           backdrop-filter: blur(3px);
   text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
 }
-.work-list .end-page button::after {
+.work-list .end-page .more-work-bt::after {
   width: 15%;
   height: 100%;
   transition: all 0.8s;
@@ -652,10 +652,10 @@
   transform: skewX(-20deg);
   opacity: 0;
 }
-.work-list .end-page button:hover {
+.work-list .end-page .more-work-bt:hover {
   border: 1px solid #ffa646;
 }
-.work-list .end-page button:hover::after {
+.work-list .end-page .more-work-bt:hover::after {
   left: 250px;
   opacity: 1;
 }
