@@ -741,7 +741,6 @@ main h3 {
   padding: 200px 0 20px;
   font-size: 60px;
   color: #16352a;
-  border-bottom: 2px solid #16352a;
 }
 main .nav-center {
   max-width: 1000px;
@@ -774,17 +773,18 @@ main nav {
 }
 main nav a {
   display: block;
-  width: 30%;
+  width: 33.3%;
   height: auto;
   padding: 18px 0 15px;
   text-align: center;
-  box-shadow: 0px 10px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
   color: #777;
   font-size: 24px;
   transition: all 0.3s;
 }
 main nav a:hover {
-  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 10px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
   color: #ffa646;
 }
 
